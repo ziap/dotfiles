@@ -1,6 +1,6 @@
 # Zap's dotfiles
 
-Just some configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow, and making something that looks good.
+Just some configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
 
 ![](screenshots/Screenshot0.png)
 ![](screenshots/Screenshot1.png)
@@ -30,35 +30,22 @@ Just some configuration I made to learn more about Linux and desktop operating s
 
 ## Required packages
 
-### Sway dependencies
-
-```
-sway kitty waybar rofi
-```
-
-### Zsh dependencices
-
-```
-zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite 
-```
-
-### Neovim dependencies
-
-Plugin manager: [vim-plug](https://github.com/junegunn/vim-plug)
-
-Other:
-
-```
-neovim node npm python3 python3-pip git gcc wl-clipboard ripgrep fd-find clang-tools-extra
-```
-
-### Install (Fedora 36)
+### Fedora 36
 
 Install [rpm fusion](https://rpmfusion.org/Configuration) first
 
+All packages can be installed with dnf
 ```
 sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite neovim nodejs npm python3 python3-pip git gcc ripgrep fd-find clang-tools-extra
 ```
+
+### Fedora Everything
+
+The setup needs to be more complete and functional before it can be used without a secondary DE.
+
+So I don't recommend setting this up on a minimal Linux installation like Arch, Fedora Everything or Gentoo.
+
+Once I'm satisfied with the setup I'll update this section. 
 
 ## Installation
 
@@ -80,8 +67,11 @@ sudo chsh -s $(which zsh)
 cp .zshrc ~
 
 # Copy config files
-
 cp -r .config/* ~/.config/
+
+# Install vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install Neovim language servers
 sudo npm i -g pyright vscode-langservers-extracted typescript typescript-language-server
