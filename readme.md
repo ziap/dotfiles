@@ -32,10 +32,10 @@ Just some configuration I made to learn more about Linux and desktop operating s
 
 ### Fedora 36
 
-Install [rpm fusion](https://rpmfusion.org/Configuration) first
-
 All packages can be installed with dnf
 ```
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
 sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite neovim nodejs npm python3 python3-pip git gcc ripgrep fd-find clang-tools-extra
 ```
 
