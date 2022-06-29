@@ -46,7 +46,7 @@ window#waybar.hidden {
 }
 
 .modules-left > widget:first-child > * {
-  margin-left: 0;
+  margin-left: 6px;
 }
 
 .modules-right > widget > * {

@@ -20,9 +20,7 @@ Just some configuration I made to learn more about Linux and desktop operating s
 
 ### Missing features
 
-- Change brightness by scrolling with bar icon
-- Change volume with function key
-- Notification and notification center
+- Notification
 - Media control panel
 - Lock screen
 - Wifi and bluetooth configuration menu
