@@ -1,0 +1,64 @@
+* {
+  accentcolor: #ebdbb2;
+  backgroundcolor: #282828;
+  separatorcolor: transparent;
+  foregroundcolor: #fbf1c7;
+  selectioncolor: @foregroundcolor;
+  
+  background-color: transparent;
+  text-color: @foregroundcolor;
+}
+
+#window {
+  font: "FiraCode NF 12";
+  location: 0;
+  background-color: @backgroundcolor;
+  border-color: @accentcolor;
+  border: 4;
+  border-radius: 0;
+  padding: 16 14;
+  width: 640;
+}
+
+/**
+ * Input box
+ */
+
+#element {
+  spacing: 2;
+  padding: 4;
+}
+
+#element.selected.normal {
+  text-color: @selectioncolor;
+}
+
+#element.selected.active {
+  text-color: @selectioncolor;
+}
+
+#inputbar {
+  border: none;
+  children: [prompt, entry];
+}
+
+#prompt {
+  color: @accentcolor;
+  padding: 2 4 4;
+}
+
+#entry {
+  padding: 2 4 4;
+}
+
+/**
+ * List
+ */
+
+element-icon {
+  size: 16;
+}
+
+element-text {
+  padding: 4 4 4 12;
+}
