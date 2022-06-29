@@ -39,7 +39,7 @@ sway kitty waybar rofi
 ### Zsh dependencices
 
 ```
-zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat 
+zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite 
 ```
 
 ### Neovim dependencies
@@ -57,7 +57,7 @@ neovim node npm python3 python3-pip git gcc wl-clipboard ripgrep fd-find clang-t
 Install [rpm fusion](https://rpmfusion.org/Configuration) first
 
 ```
-sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat neovim nodejs npm python3 python3-pip git gcc ripgrep fd-find clang-tools-extra
+sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite neovim nodejs npm python3 python3-pip git gcc ripgrep fd-find clang-tools-extra
 ```
 
 ## Installation
