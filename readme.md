@@ -36,7 +36,7 @@ All packages can be installed with dnf
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite neovim nodejs npm python3 python3-pip git gcc ripgrep fd-find clang-tools-extra
+sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite neovim nodejs npm python3 python3-pip git gcc gcc-c++ ripgrep fd-find clang-tools-extra util-linux-user
 ```
 
 ### Fedora Everything
@@ -50,13 +50,13 @@ Once I'm satisfied with the setup I'll update this section.
 ## Installation
 
 ```sh
-# Install FiraCode NF font
+# Install required packages (see above)
+
+# Install FiraCode Nerd Font
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
-./install.sh FiraCode
+sudo ./install.sh -S FiraCode
 cd ..
-
-# Install required packages (see above)
 
 # Clone this repo
 git clone --depth=1 https://github.com/ziap/dotfiles

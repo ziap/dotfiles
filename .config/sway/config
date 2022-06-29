@@ -23,7 +23,7 @@ gaps inner 16
 default_border pixel 4
 default_floating_border pixel 4
 
-font pango:FiraCode NF, 12
+font pango:FiraCode Nerd Font, 12
 
 output * bg ~/wallpaper.png fill
 
