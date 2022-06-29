@@ -79,4 +79,4 @@ Log out from your current session and login to sway
 
 # License
 
-This project is unlicensed and belongs to the public domain.
+This project is licensed under the [MIT license](LICENSE).
