@@ -50,7 +50,7 @@ bindsym {
   # Start your browser
   $mod+b exec $browser
 
-  $mod+p exec grimshot copy screen
+  $mod+p exec grimshot save screen
 
   # Reload the configuration file
   $mod+Shift+c reload
@@ -154,18 +154,54 @@ bindsym {
 #
 # Exit mode
 #
-set $exit "Exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
+set {
+  $exit-poweroff "Are you sure you want to shut down (Y/n)"
+  $exit-reboot "Are you sure you want to restart (Y/n)"
+  $exit-logout "Are you sure you want to logout (Y/n)"
+  $exit "Exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
+}
+
+mode $exit-poweroff {
+  bindsym --to-code {
+    y exec systemctl poweroff
+    Return exec systemctl poweroff
+
+    n mode "default"
+    Escape mode "default"
+  } 
+}
+
+mode $exit-reboot {
+  bindsym --to-code {
+    y exec systemctl reboot
+    Return exec systemctl reboot
+
+    n mode "default"
+    Escape mode "default"
+  } 
+}
+
+mode $exit-logout {
+  bindsym --to-code {
+    y exec swaymsg exit
+    Return exec swaymsg exit
+
+    n mode "default"
+    Escape mode "default"
+  } 
+}
+
 mode $exit {
-    bindsym --to-code {
-        s exec systemctl suspend, mode "default"
-        p exec systemctl poweroff
-        r exec systemctl reboot
-        l exec swaymsg exit
-    
-        Return mode "default"
-        Escape mode "default"
-        $mod+x mode "default"
-    }
+  bindsym --to-code {
+    s exec systemctl suspend, mode "default"
+    p mode $exit-poweroff
+    r mode $exit-reboot
+    l mode $exit-logout
+
+    Return mode "default"
+    Escape mode "default"
+    $mod+x mode "default"
+  }
 }
 
 bindsym --to-code $mod+x mode $exit

@@ -1,6 +1,8 @@
 configuration {
   modi: "combi,drun,run,window";
   lines: 6;
+  me-accept-entry: "MousePrimary";
+  me-select-entry: "";
   show-icons: true;
   terminal: "kitty";
   combi-modi: "drun,run";

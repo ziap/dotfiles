@@ -6,9 +6,9 @@ Just some configuration I made to learn more about Linux and desktop operating s
 ![](screenshots/Screenshot1.png)
 ![](screenshots/Screenshot2.png)
 
-## Information
+## Informations
 
-- OS: [Fedora Linux](https://getfedora.org/) (but it should work with other distros)
+- OS: [Fedora Linux](https://getfedora.org/)
 - WM: [sway](https://swaywm.org/)
 - Shell: [zsh](https://www.zsh.org/)
 - Editor: [neovim](https://neovim.io/)
@@ -34,16 +34,8 @@ All packages can be installed with dnf
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install @multimedia sway kitty waybar rofi zsh zsh-autosuggestions zsh-syntax-highlighting starship exa bat sqlite neovim nodejs npm python3 python3-pip git gcc gcc-c++ ripgrep fd-find clang-tools-extra util-linux-user
+sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git grimshot kitty neovim nodejs npm python3 python3-pip ripgrep rofi sqlite starship sway util-linux-user waybar zsh zsh-autosuggestions zsh-syntax-highlighting
 ```
-
-### Fedora Everything
-
-The setup needs to be more complete and functional before it can be used without a secondary DE.
-
-So I don't recommend setting this up on a minimal Linux installation like Arch, Fedora Everything or Gentoo.
-
-Once I'm satisfied with the setup I'll update this section. 
 
 ## Installation
 
@@ -65,7 +57,7 @@ sudo chsh -s $(which zsh)
 cp .zshrc ~
 
 # Copy config files
-cp -r .config/* ~/.config/
+cp -r .config ~
 
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
