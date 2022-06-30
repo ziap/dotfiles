@@ -2,9 +2,7 @@
 
 Just some configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
 
-![](screenshots/Screenshot0.png)
-![](screenshots/Screenshot1.png)
-![](screenshots/Screenshot2.png)
+![](screenshot.png)
 
 ## Informations
 
