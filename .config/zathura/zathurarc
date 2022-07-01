@@ -1,0 +1,12 @@
+set font "FiraCode Nerd Font 12"
+
+set default-bg "#282828"
+set default-fg "#ebdbb2"
+
+set statusbar-bg "#282828"
+set statusbar-fg "#ebdbb2"
+
+set recolor
+set recolor-keephue
+set recolor-lightcolor "#282828"
+set recolor-darkcolor "#ebdbb2" 

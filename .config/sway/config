@@ -16,6 +16,7 @@ set {
 
   $term kitty
   $menu rofi -show drun | swaymsg
+  $file rofi -show filebrowser | swaymsg
   $browser firefox
 }
 
@@ -38,16 +39,14 @@ input type:touchpad {
 # Basics:
 #
 bindsym {
-  # Start a terminal 
   $mod+Return exec $term
 
-  # Kill focused window
   $mod+q kill
 
-  # Start your launcher
   $mod+d exec $menu
+  
+  $mod+e exec $file
 
-  # Start your browser
   $mod+b exec $browser
 
   $mod+p exec grimshot save screen

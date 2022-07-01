@@ -32,7 +32,7 @@ All packages can be installed with dnf
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git grimshot kitty neovim nodejs npm python3 python3-pip ripgrep rofi sqlite starship sway util-linux-user waybar zsh zsh-autosuggestions zsh-syntax-highlighting
+sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git grimshot kitty neovim nodejs npm python3 pandoc python3-pip ripgrep rofi sqlite starship sway texlive-latex util-linux-user waybar zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
 ```
 
 ## Installation

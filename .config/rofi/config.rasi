@@ -1,5 +1,5 @@
 configuration {
-  modi: "combi,drun,run,window";
+  modi: "combi,drun,run,window,filebrowser";
   lines: 6;
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
@@ -14,6 +14,7 @@ configuration {
   display-run: "Commands";
   display-ssh: "SSH";
   display-drun: "Applications";
+  display-filebrowser: "Files";
   display-combi: "All";
   display-keys: "Keys";
 }
