@@ -40,18 +40,11 @@ input type:touchpad {
 #
 bindsym {
   $mod+Return exec $term
-
   $mod+q kill
-
   $mod+d exec $menu
-  
   $mod+e exec $file
-
   $mod+b exec $browser
-
   $mod+p exec grimshot save screen
-
-  # Reload the configuration file
   $mod+Shift+c reload
 }
 
@@ -59,12 +52,13 @@ bindsym {
 # Multimedia
 #
 bindsym --locked {
-  XF86MonBrightnessUp    exec light -A 5
-  XF86MonBrightnessDown  exec light -U 5
+  XF86MonBrightnessUp exec light -A 5
+  XF86MonBrightnessDown exec light -U 5
 
   XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
   XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
   XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+  XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
   XF86AudioPlay exec playerctl play-pause
   XF86AudioNext exec playerctl next
