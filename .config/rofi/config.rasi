@@ -4,6 +4,7 @@ configuration {
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
   show-icons: true;
+  icon-theme: "Papirus";
   terminal: "kitty";
   combi-modi: "drun,run";
   hide-scrollbar: true;

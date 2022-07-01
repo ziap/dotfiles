@@ -1,5 +1,5 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+  "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "backlight", "cpu", "memory", "temperature", "battery"],
   "tray": {
@@ -54,5 +54,18 @@
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40, 
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
   }
 }
