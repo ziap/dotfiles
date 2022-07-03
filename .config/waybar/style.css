@@ -72,14 +72,11 @@ widget > * {
 
 @keyframes blink {
   to {
-    background-color: #ebdbb2;
-    color: #282828;
+    color: #ebdbb2;
   }
 }
 
 #battery.critical:not(.charging) {
-  background-color: #282828;
-  color: #282828;
   animation-name: blink;
   animation-duration: 1s;
   animation-timing-function: linear;
