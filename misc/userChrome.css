@@ -1,10 +1,9 @@
-
 /*========================================================================================================*
 
   +-----+-----+-----+-----+-----+-----+-----+
   | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
   | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
-  +-----+-----+-----+-----+-----+-----+-----+   Mouse Edition with gruvbox colorscheme.
+  +-----+-----+-----+-----+-----+-----+-----+  Mouse Edition with gruvbox colorscheme.
 
 
     Description:    Cascade, Mouse Edition, is a Firefox Style based on the Cascade theme by Andreas Grafen
@@ -20,6 +19,7 @@
                     Clément Rambaud (minor tweaks on the original file)
 
                     Zap (gruvbox colors)
+
 
     Repository:     https://github.com/andreasgrafen/cascade
                     https://github.com/crambaud/cascade
@@ -246,6 +246,10 @@ window,
   background: var(--uc-theme-colour) !important;
 }
 
+.tabbrowser-tab > .tab-stack > .tab-content {
+  color: var(--inverted-colour) !important;
+}
+
 /* active tab background */
 .tabbrowser-tab[selected] > .tab-stack > .tab-background {
   background: var(--uc-inverted-colour) !important;
@@ -279,6 +283,7 @@ window,
   > .tab-context-line {
   margin: -1px var(--container-tabs-indicator-margin) 0
     var(--container-tabs-indicator-margin) !important;
+
   border-radius: var(--tab-border-radius) !important;
 }
 
