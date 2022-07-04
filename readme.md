@@ -50,7 +50,7 @@ git clone --depth=1 https://github.com/ziap/dotfiles
 cd dotfiles
 
 # Setup zsh
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh)
 cp .zshrc ~
 
 # Copy files
@@ -62,7 +62,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install Neovim language servers
-sudo npm i -g pyright vscode-langservers-extracted typescript typescript-language-server
+sudo npm i -g pyright vscode-langservers-extracted typescript typescript-language-server emmet-ls
 ```
 
 Log out from your current session and login to sway
