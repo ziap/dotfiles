@@ -15,7 +15,37 @@ compinit
 _comp_options+=(globdots)	
 
 # Keybinds
+
+## vim mode config
+
+# Activate vim mode.
 bindkey -v
+
+# Remove mode switching delay.
+KEYTIMEOUT=5
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+
+# Use beam shape cursor on startup.
+echo -ne '\e[5 q'
+
+# Use beam shape cursor for each new prompt.
+preexec() {
+   echo -ne '\e[5 q'
+}
 
 ## Ctrl-P and Ctrl-N for navigating history
 function _hist_nav_down {
@@ -49,10 +79,6 @@ case $TERM in
         precmd () {print -Pn "\e]0;%~\a"}
         ;;
 esac
-
-# Beam cursor
-echo -ne '\e[5 q'
-preexec() { echo -ne '\e[5 q' ;}
 
 # Plugins
 
