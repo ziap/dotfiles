@@ -26,7 +26,7 @@ default_floating_border pixel 4
 
 font pango:FiraCode Nerd Font, 12
 
-output * bg ~/wallpaper.png fill
+output * bg ~/.config/wallpaper.png fill
 
 input type:touchpad {
   tap enabled
