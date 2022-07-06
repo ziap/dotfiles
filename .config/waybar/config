@@ -1,24 +1,10 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "backlight", "cpu", "memory", "temperature", "battery"],
-  "tray": {
-    "spacing": 10
-  },
+  "modules-right": ["pulseaudio", "backlight", "network", "battery"],
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%H:%M}"
-  },
-  "cpu": {
-    "format": "{usage}% "
-  },
-  "memory": {
-    "format": "{}% "
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
   },
   "backlight": {
     "format": "{percent}% {icon}",
@@ -55,17 +41,18 @@
     },
     "on-click": "pavucontrol"
   },
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40, 
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜"
-    },
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "sway/workspaces": {
+    "disable-scroll": true
   }
 }
