@@ -45,6 +45,7 @@ bindsym {
   $mod+e exec $file
   $mod+b exec $browser
   $mod+p exec grimshot save screen
+  $mod+z exec swaylock
   $mod+Shift+c reload
 }
 

@@ -19,7 +19,6 @@ Just some configuration I made to learn more about Linux and desktop operating s
 ### Missing features
 
 - Notification
-- Lock screen
 - Wifi and bluetooth configuration menu
 - Ibus
 
