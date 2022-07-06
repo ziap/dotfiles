@@ -2,29 +2,28 @@
 # | ZSH Configuration file |
 # +------------------------+
 
-# History
+# ---- HISTORY ----------------------------------
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Completion
+# ---- Completion -------------------------------
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)	
 
-# Keybinds
 
-## vim mode config
+# ---- VI MODE CONFIG ---------------------------
 
-# Activate vim mode.
+## Activate vi mode.
 bindkey -v
 
-# Remove mode switching delay.
+## Remove mode switching delay.
 KEYTIMEOUT=5
 
-# Change cursor shape for different vi modes.
+## Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -39,13 +38,15 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
-# Use beam shape cursor on startup.
+## Use beam shape cursor on startup.
 echo -ne '\e[5 q'
 
-# Use beam shape cursor for each new prompt.
+## Use beam shape cursor for each new prompt.
 preexec() {
    echo -ne '\e[5 q'
 }
+
+# ---- KEYBINDS ---------------------------------
 
 ## Ctrl-P and Ctrl-N for navigating history
 function _hist_nav_down {
@@ -64,7 +65,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-# Aliases
+# ---- ALIASES ----------------------------------
 alias ls='exa --icons'
 alias ll='exa --icons -l'
 alias la='exa --icons -a'
@@ -73,14 +74,14 @@ alias tree='exa --icons -T'
 alias cat='bat --style=numbers,grid --theme=gruvbox-dark'
 alias nv='nvim'
 
-# Change xterm title
+# ---- CHANGE XTERM TITLE -----------------------
 case $TERM in
     xterm*)
         precmd () {print -Pn "\e]0;%~\a"}
         ;;
 esac
 
-# Plugins
+# ---- PLUGINS ----------------------------------
 
 ## Starship phrompt
 eval "$(starship init zsh)"
