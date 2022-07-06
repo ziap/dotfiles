@@ -35,21 +35,21 @@ window#waybar.hidden {
 }
 
 widget > * {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .modules-left > widget > * {
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .modules-left > widget:first-child > * {
-  margin-left: 6px;
+  margin-left: 8px;
 }
 
 .modules-right > widget > * {
-  padding: 0 12px;
+  padding: 0 16px;
   margin-left: 0;
   margin-right: 0;
   color: #282828;
@@ -62,7 +62,7 @@ widget > * {
 
 .modules-right > widget:last-child > * {
   border-radius: 0 5px 5px 0;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 #mode {

@@ -20,7 +20,7 @@ set {
   $browser firefox
 }
 
-gaps inner 16
+gaps inner 8
 default_border pixel 4
 default_floating_border pixel 4
 
