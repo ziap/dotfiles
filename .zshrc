@@ -48,16 +48,13 @@ preexec() {
 
 # ---- KEYBINDS ---------------------------------
 
-## Ctrl-P and Ctrl-N for navigating history
-function _hist_nav_down {
-  zle end-of-line
-  zle down-history
-}
+## Emacs binding in insert mode
+bindkey -M main '^P' up-line-or-history
+bindkey -M main '^N' down-line-or-history
+bindkey -M main '^F' forward-char
+bindkey -M main '^B' backward-char
 
-zle -N _hist_nav_down
-
-bindkey '^P' up-history
-bindkey '^N' _hist_nav_down
+bindkey '^@' autosuggest-accept
 
 ## Vim binding in tab completion select menu
 bindkey -M menuselect 'h' vi-backward-char
