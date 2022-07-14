@@ -70,6 +70,7 @@ alias lla='exa --icons -la'
 alias tree='exa --icons -T'
 alias cat='bat --style=numbers,grid --theme=gruvbox-dark'
 alias nv='nvim'
+alias sv='python -m http.server'
 
 # ---- CHANGE XTERM TITLE -----------------------
 case $TERM in

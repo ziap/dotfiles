@@ -32,6 +32,7 @@ input type:touchpad {
   tap enabled
   natural_scroll enabled
   middle_emulation enabled
+  dwt disabled
 }
 
 ### Key bindings
