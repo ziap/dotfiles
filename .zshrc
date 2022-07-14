@@ -14,7 +14,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)	
 
-
 # ---- VI MODE CONFIG ---------------------------
 
 ## Activate vi mode.
@@ -63,14 +62,27 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
 # ---- ALIASES ----------------------------------
-alias ls='exa --icons'
-alias ll='exa --icons -l'
-alias la='exa --icons -a'
-alias lla='exa --icons -la'
-alias tree='exa --icons -T'
-alias cat='bat --style=numbers,grid --theme=gruvbox-dark'
+
+## Same command but with extra features
+alias ls='exa --git --icons'
+alias cat='bat --theme=gruvbox-dark'
+
+## Shorthands
 alias nv='nvim'
-alias sv='python -m http.server'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias duh='du -h'
+
+## Quickly start a dev server
+alias sv='python -m http.server 3000'
+
+## Pandoc settings mostly for compiling markdown
+alias mdc='pandoc \
+  -s --pdf-engine=xelatex \
+  -V "monofont:FiraCode Nerd Font" \
+  -V "numbersections:true" \
+  -V "geometry:margin=30mm"'
 
 # ---- CHANGE XTERM TITLE -----------------------
 case $TERM in
