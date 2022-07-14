@@ -14,7 +14,7 @@ window {
   location: 0;
   background-color: @backgroundcolor;
   border-color: @accentcolor;
-  border: 4;
+  border: 2;
   padding: 16 14;
   width: 640;
 }

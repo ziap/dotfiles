@@ -21,8 +21,8 @@ set {
 }
 
 gaps inner 8
-default_border pixel 4
-default_floating_border pixel 4
+default_border pixel 2
+default_floating_border pixel 2
 
 font pango:FiraCode Nerd Font, 12
 
