@@ -17,7 +17,6 @@ set {
   $term kitty
   $menu rofi -show drun | swaymsg
   $file rofi -show filebrowser | swaymsg
-  $screenshot-selection grim -g "$(slurp)" - | wl-copy
   $browser firefox
 }
 
@@ -206,14 +205,22 @@ bindsym --to-code $mod+x mode $exit
 ### Screenshot mode
 #
 set {
-  $screenshot "Screenshot: [s]creen [w]indow [r]egion"
+  $screenshot "Screenshot: [s]creen [w]window [r]egion"
+ 
+  $screenshot-screen grim
+  $screenshot-region grim -g "$(slurp)"
+  $screenshot-window ~/.config/sway/screenshot-win.sh
 }
 
 mode $screenshot {
   bindsym --to-code {
-    s mode "default", exec grim
-    w mode "default", exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')"
-    r mode "default", exec grim -g "$(slurp)"
+    s mode "default", exec $screenshot-screen
+    w mode "default", exec $screenshot-window 
+    r mode "default", exec $screenshot-region
+
+    Return mode "default"
+    Escape mode "default"
+    $mod+x mode "default"
   }
 }
 
