@@ -18,7 +18,7 @@ Just some configuration I made to learn more about Linux and desktop operating s
 
 ### Features
 
-- Gruvbox themed desktop
+- Minimal and aesthetic gruvbox themed desktop
 - Window management with autotiling
 - Lightweight yet powerful ZSH shell with starship prompt
 - Working development environment for
@@ -41,22 +41,20 @@ Just some configuration I made to learn more about Linux and desktop operating s
 - Wifi, bluetooth and more widgets with eww
 - Setup on a more minimal Fedora installation
 
-## Required packages
-
-All packages can be installed with dnf
-
-```bash
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-
-sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git grim kitty light ImageMagick neovim nodejs npm papirus-icon-theme python3 pandoc playerctl python3-pip ripgrep rofi slurp sqlite starship sway texlive util-linux-user waybar wl-clipboard zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
-```
-
 ## Installation
 
 ```bash
-# Install required packages (see above)
+# Enable rpmfusion
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
-# Install FiraCode Nerd Font
+# Install packages
+sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
+  grim kitty light ImageMagick neovim nodejs npm papirus-icon-theme python3 \
+  pandoc playerctl python3-pip ripgrep rofi slurp sqlite starship sway texlive \
+  util-linux-user waybar wl-clipboard zathura zathura-pdf-mupdf zsh \
+  zsh-autosuggestions zsh-syntax-highlighting
+
+# Install Fonts
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
 sudo ./install.sh -S FiraCode   # Terminal font
@@ -82,7 +80,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install Neovim language servers
-sudo npm i -g pyright vscode-langservers-extracted typescript typescript-language-server emmet-ls
+sudo npm i -g pyright vscode-langservers-extracted typescript \
+  typescript-language-server emmet-ls
 ```
 
 Log out from your current session and login to sway
