@@ -2,7 +2,7 @@
 
 Just some configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
 
-![](screenshot.png)
+![](rice.png)
 
 ## Informations
 
