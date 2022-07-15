@@ -3,7 +3,7 @@
 # +---------------------------+
 
 #
-# Variables
+# Variables:
 #
 set {
   $mod Mod4
@@ -32,6 +32,11 @@ input type:touchpad {
   dwt disabled
 }
 
+#
+# Autotiling:
+#
+exec_always ~/.config/sway/autotiling.py
+
 ### Key bindings
 #
 # Basics:
@@ -47,7 +52,7 @@ bindsym {
 }
 
 #
-# Multimedia
+# Multimedia:
 #
 bindsym --locked {
   XF86MonBrightnessUp exec light -A 5
@@ -147,7 +152,7 @@ bindsym {
 }
 
 #
-# Exit mode
+# Exit mode:
 #
 set {
   $exit-poweroff "Are you sure you want to shut down (Y/n)"
@@ -202,7 +207,7 @@ mode $exit {
 bindsym --to-code $mod+x mode $exit
 
 #
-### Screenshot mode
+### Screenshot mode:
 #
 set {
   $screenshot "Screenshot: [s]creen [w]window [r]egion"

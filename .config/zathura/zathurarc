@@ -1,3 +1,5 @@
+set selection-clipboard clipboard
+
 set font "FiraCode Nerd Font 12"
 
 set default-bg "#282828"

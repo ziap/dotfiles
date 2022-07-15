@@ -16,18 +16,36 @@ Just some configuration I made to learn more about Linux and desktop operating s
 - Bar: [waybar](https://github.com/Alexays/Waybar)
 - Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox)
 
-### Missing features
+### Features
 
-- Notification
-- Wifi and bluetooth configuration menu
-- Ibus
+- Gruvbox themed desktop
+- Window management with autotiling
+- Lightweight yet powerful ZSH shell with starship prompt
+- Working development environment for
+    + C++
+    + HTML/CSS/JS
+    + Python
+- Document editing with markdown, latex, pandoc and reveal.js
+- File browsing and application launcher with rofi
+- Screenshot with support for
+    + Region
+    + Window
+    + Screen
+- Power menu and a very basic lock screen
+- Essential Fedora modification (rpmfusion, codecs) included in the install script
+
+### Plan
+
+- Rust, Svelte development environment
+- Notification with dunst
+- Wifi, bluetooth and more widgets with eww
+- Setup on a more minimal Fedora installation
 
 ## Required packages
 
-### Fedora 36
-
 All packages can be installed with dnf
-```
+
+```bash
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
 sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git grim kitty light ImageMagick neovim nodejs npm papirus-icon-theme python3 pandoc playerctl python3-pip ripgrep rofi slurp sqlite starship sway texlive util-linux-user waybar wl-clipboard zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
@@ -55,6 +73,9 @@ cp .zshrc ~
 
 # Copy files
 cp -r .config ~
+
+# Make zathura default pdf reader
+xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
