@@ -18,21 +18,21 @@ Just some configuration I made to learn more about Linux and desktop operating s
 
 ### Features
 
-- Minimal and aesthetic gruvbox themed desktop
-- Window management with autotiling
-- Lightweight yet powerful ZSH shell with starship prompt
-- Working development environment for
+- ✨ Minimal and aesthetic gruvbox themed desktop
+- 🍱 Window management with autotiling
+- 🗨️ Lightweight yet powerful ZSH shell with starship prompt
+- 🚀 Functional developer environment for
     + C++
     + HTML/CSS/JS
     + Python
-- Document editing with markdown, latex, pandoc and reveal.js
-- File browsing and application launcher with rofi
-- Screenshot with support for
+- 📄 Document editing with markdown, latex, pandoc and reveal.js
+- 📁 File browsing and application launcher with rofi
+- 📷 Screenshot with support for
     + Region
     + Window
     + Screen
-- Power menu and a very basic lock screen
-- Essential Fedora modification (rpmfusion, codecs) included in the install script
+- 🔌 Power menu and a very basic lock screen
+- 🔧 Essential Fedora modification (rpmfusion, codecs) included in the install script
 
 ### Plan
 
@@ -72,7 +72,7 @@ cp .zshrc ~
 # Copy files
 cp -r .config ~
 
-# Make zathura default pdf reader
+# Make zathura the default pdf reader
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # Install vim-plug
