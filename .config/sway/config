@@ -17,12 +17,12 @@ set {
   $term kitty
   $menu rofi -show drun | swaymsg
   $file rofi -show filebrowser | swaymsg
+  $screenshot grim -g "$(slurp)" - | wl-copy
   $browser firefox
 }
 
 gaps inner 8
 default_border pixel 2
-default_floating_border pixel 2
 
 font pango:FiraCode Nerd Font, 12
 
@@ -45,7 +45,7 @@ bindsym {
   $mod+d exec $menu
   $mod+e exec $file
   $mod+b exec $browser
-  $mod+p exec grimshot save screen
+  $mod+p exec $screenshot
   $mod+z exec swaylock
   $mod+Shift+c reload
 }
