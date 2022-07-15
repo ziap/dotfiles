@@ -10,7 +10,7 @@
 }
 
 window {
-  font: "FiraCode NF 12";
+  font: "RobotoMono Nerd Font 14";
   location: 0;
   background-color: @backgroundcolor;
   border-color: @accentcolor;

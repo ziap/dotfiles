@@ -24,8 +24,6 @@ set {
 gaps inner 8
 default_border pixel 2
 
-font pango:FiraCode Nerd Font, 12
-
 output * bg ~/.config/wallpaper.png fill
 
 input type:touchpad {

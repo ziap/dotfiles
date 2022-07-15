@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: FiraCode Nerd Font;
+  font-family: RobotoMono Nerd Font;
   font-size: 14px;
   font-weight: 500;
 }
@@ -45,6 +45,10 @@ widget > * {
 
 .modules-left > widget:first-child > * {
   margin-left: 8px;
+}
+
+.modules-left > widget:last-child > * {
+  margin-right: 32px;
 }
 
 .modules-right > widget > * {

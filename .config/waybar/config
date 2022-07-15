@@ -4,7 +4,7 @@
   "modules-right": ["pulseaudio", "backlight", "network", "battery"],
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a, %b %d - %I:%M %p}",
+    "format": "{: %a, %b %d  -   %I:%M %p}"
   },
   "backlight": {
     "format": "{percent}% {icon}",

@@ -35,13 +35,14 @@ sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git g
 
 ## Installation
 
-```sh
+```bash
 # Install required packages (see above)
 
 # Install FiraCode Nerd Font
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
-sudo ./install.sh -S FiraCode
+sudo ./install.sh -S FiraCode   # Terminal font
+sudo ./install.sh -S RobotoMono # UI font
 cd ..
 
 # Clone this repo
