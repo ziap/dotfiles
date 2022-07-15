@@ -4,7 +4,7 @@
   "modules-right": ["pulseaudio", "backlight", "network", "battery"],
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%H:%M}"
+    "format": "{:%a, %b %d - %I:%M %p}",
   },
   "backlight": {
     "format": "{percent}% {icon}",
@@ -43,9 +43,9 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": "{essid} ",
+    "format-wifi": "Connected ",
     "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-disconnected": "", //An empty format will hide the module.
+    "format-disconnected": "Disconnected 睊", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} ",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
