@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """
 This script uses the i3ipc python module to switch the layout splith / splitv
@@ -36,7 +36,7 @@ def switch_splitting(i3, e):
                     i3.command(new_layout)
 
     except Exception as e:
-        print("Error: {}".format(e), file=sys.stderr)
+        print("Error: %s" % e, file=sys.stderr)
 
 
 def main():
@@ -45,9 +45,9 @@ def main():
     for e in ["WINDOW", "MODE"]:
         try:
             i3.on(Event[e], handler)
-            print("{} subscribed".format(Event[e]))
+            print("%s subscribed" % Event[e])
         except KeyError:
-            print("'{}' is not a valid event".format(e), file=sys.stderr)
+            print("'%s' is not a valid event" % e, file=sys.stderr)
     i3.main()
 
 
