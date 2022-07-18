@@ -49,6 +49,7 @@ bindkey -M main '^F' forward-char
 bindkey -M main '^B' backward-char
 
 bindkey '^@' autosuggest-accept
+bindkey '^L' clear-screen
 
 ## Vim binding in tab completion select menu
 bindkey -M menuselect 'h' vi-backward-char

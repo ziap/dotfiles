@@ -22,8 +22,8 @@ Just some configuration I made to learn more about Linux and desktop operating s
 - 🍱 Window management with autotiling
 - 🗨️ Lightweight yet powerful ZSH shell with starship prompt
 - 🚀 Functional developer environment for
-    + C++
-    + HTML/CSS/JS
+    + C and C++
+    + Vanilla web development
     + Python
 - 📄 Document editing with markdown, latex, pandoc and reveal.js
 - 📁 File browsing and application launcher with rofi
