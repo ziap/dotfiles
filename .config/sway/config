@@ -22,6 +22,7 @@ set {
 
 gaps inner 8
 default_border pixel 2
+default_floating_border pixel 2
 
 output * bg ~/.config/wallpaper.png fill
 
