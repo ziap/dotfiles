@@ -55,6 +55,7 @@ inputbar {
 }
 
 listview {
+  background-color: @accent;
   columns: 1;
   lines: 7;
   spacing: 0;
@@ -89,9 +90,11 @@ element selected {
   background-color: @fg;
   
   text-color: @bg;
+  border-radius: 5px;
 }
 
 mode-switcher {
+  background-color: @accent;
   spacing: 0;
   border-color: green;
   border-radius: 5px;
@@ -108,6 +111,7 @@ button {
 
 button selected {
   padding: 8px;
+  border-radius: 5px;
   text-color: @bg;
   background-color: @fg;
 }
