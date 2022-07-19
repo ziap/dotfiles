@@ -1,61 +1,113 @@
 * {
-  accentcolor: #ebdbb2;
-  backgroundcolor: #282828;
-  separatorcolor: transparent;
-  foregroundcolor: #fbf1c7;
-  selectioncolor: #8ec07c;
-  
-  background-color: transparent;
-  text-color: @foregroundcolor;
+  accent: #3c3836;
+  bg: #282828;
+  fg: #ebdbb2;
+  background-color: @bg;
+  text-color: @fg;
+  font: "RobotoMono Nerd Font 14";
+}
+
+element-text,
+element-icon,
+mode-switcher {
+  background-color: inherit;
+  text-color: inherit;
 }
 
 window {
-  font: "RobotoMono Nerd Font 14";
-  location: 0;
-  background-color: @backgroundcolor;
-  border-color: @accentcolor;
-  border: 2;
-  padding: 16 14;
-  width: 640;
-}
-
-/**
- * Input box
- */
-element {
-  spacing: 2;
-  padding: 4;
-}
-
-listview {
-  lines: 7;
-}
-
-element-text selected {
-  text-color: @selectioncolor;
-}
-
-inputbar {
-  border: none;
-  children: [prompt, entry];
+  width: 768px;
+  transparency: "real";
+  border: 2px;
+  border-color: @fg;
 }
 
 prompt {
-  color: @accentcolor;
-  padding: 2 4 4;
+  enabled: true;
+  background-color: @bg;
+  padding: 8px 6px;
+  text-color: @fg;
+  margin: 0px 20px 0px 0px;
+}
+
+textbox-prompt-colon {
+  padding: 8px 6px;
+  border: 0 0 2px 0;
+  border-color: @fg;
+  str: "";
+  expand: false;
 }
 
 entry {
-  padding: 2 4 4;
+  placeholder: "Search";
+  placeholder-color: @fg;
+  text-color: @fg;
+  border: 0 0 2px 0;
+  border-color: @fg;
+  expand: true;
+  padding: 8px 2px;
 }
 
-/**
- * List
- */
-element-icon {
-  size: 16;
+inputbar {
+  children: [prompt,textbox-prompt-colon,entry];
+  expand: false;
+  spacing: 0;
+  margin: 20px;
+}
+
+listview {
+  columns: 1;
+  lines: 7;
+  spacing: 0;
+  cycle: false;
+  dynamic: true;
+  layout: vertical;
+  margin: 0 20px;
+  border-radius: 5px;
+  scrollbar: false;
+}
+
+mainbox {
+  children: [inputbar,listview,mode-switcher];
+}
+
+element {
+  orientation: horizontal;
+  padding: 12px 24px;
+  
+  background-color: @accent;
 }
 
 element-text {
-  padding: 4 4 4 12;
+  expand: true;
+  margin: 0 10px;
+  
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element selected {
+  background-color: @fg;
+  
+  text-color: @bg;
+}
+
+mode-switcher {
+  spacing: 0;
+  border-color: green;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+button {
+  padding: 15px;
+  margin: 0;
+  
+  text-color: @fg;
+  background-color: @accent;
+}
+
+button selected {
+  padding: 8px;
+  text-color: @bg;
+  background-color: @fg;
 }

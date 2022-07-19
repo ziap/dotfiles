@@ -16,7 +16,6 @@ set {
 
   $term kitty
   $menu rofi -show drun | swaymsg
-  $file rofi -show filebrowser | swaymsg
   $browser firefox
 }
 
@@ -46,7 +45,6 @@ bindsym {
   $mod+Return exec $term
   $mod+q kill
   $mod+d exec $menu
-  $mod+e exec $file
   $mod+b exec $browser
   $mod+z exec swaylock
   $mod+Shift+c reload
@@ -239,7 +237,7 @@ bindsym --to-code $mod+p mode $screenshot
 set {
   $accent #ebdbb2
   $red #cc241d
-  $darkgray #1d2021
+  $darkgray #3c3836
 }
 
 client.focused          $accent $accent $darkgray $accent $accent

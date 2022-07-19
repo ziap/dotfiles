@@ -1,23 +1,33 @@
 configuration {
-  modi: "combi,drun,run,window,filebrowser";
-  lines: 6;
+  modi: "drun,filebrowser,run";
+  
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
   show-icons: true;
-  icon-theme: "Papirus";
-  terminal: "kitty";
+  
+  drun-display-format: " {name} ";
+  sidebar-mode: true;
+  matching: "fuzzy";
+  scroll-method: 0;
+  disable-history: false;
+
+  display-drun: " Menu";
+  display-run: " Run";
+  display-filebrowser: " Browse";
+
   combi-modi: "drun,run";
-  hide-scrollbar: true;
-  window-format: "{t}";
-  combi-hide-mode-prefix: true;
-  display-window: "Windows";
-  display-windowcd: "Windows";
-  display-run: "Commands";
-  display-ssh: "SSH";
-  display-drun: "Applications";
-  display-filebrowser: "Files";
-  display-combi: "All";
-  display-keys: "Keys";
+  sort: true;
+  sorting-method: "normal";
+
+  timeout {
+    action: "kb-cancel";
+    delay: 30;
+  }
+
+  filebrowser {
+    directories-first: true;
+    sorting-method: "name";
+  }
 }
 
 @theme "gruvbox.rasi"

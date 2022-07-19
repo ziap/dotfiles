@@ -49,10 +49,10 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 
 # Install packages
 sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
-  grim kitty light ImageMagick neovim nodejs npm papirus-icon-theme python3 \
-  pandoc playerctl python3-pip ripgrep rofi slurp sqlite starship sway texlive \
-  util-linux-user waybar wl-clipboard zathura zathura-pdf-mupdf zsh \
-  zsh-autosuggestions zsh-syntax-highlighting
+  grim kitty light ImageMagick neovim nodejs npm pandoc playerctl python3 \
+  python3-pip ripgrep rofi slurp sqlite starship sway texlive util-linux-user \
+  waybar wl-clipboard zathura zathura-pdf-mupdf zsh zsh-autosuggestions \
+  zsh-syntax-highlighting
 
 # Install Fonts
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
