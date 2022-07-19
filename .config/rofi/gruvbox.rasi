@@ -21,14 +21,6 @@ window {
   border-color: @fg;
 }
 
-prompt {
-  enabled: true;
-  background-color: @bg;
-  padding: 8px 6px;
-  text-color: @fg;
-  margin: 0px 20px 0px 0px;
-}
-
 textbox-prompt-colon {
   padding: 8px 6px;
   border: 0 0 2px 0;
@@ -43,12 +35,12 @@ entry {
   text-color: @fg;
   border: 0 0 2px 0;
   border-color: @fg;
-  expand: true;
   padding: 8px 2px;
+  expand: true;
 }
 
 inputbar {
-  children: [prompt,textbox-prompt-colon,entry];
+  children: [textbox-prompt-colon,entry];
   expand: false;
   spacing: 0;
   margin: 20px;

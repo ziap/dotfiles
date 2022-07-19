@@ -11,9 +11,9 @@ configuration {
   scroll-method: 0;
   disable-history: false;
 
-  display-drun: " Apps";
-  display-run: " Run";
-  display-filebrowser: " Files";
+  display-drun: "異 Apps";
+  display-run: " Run";
+  display-filebrowser: " Files";
 
   combi-modi: "drun,run";
   sort: true;
