@@ -1,6 +1,6 @@
 # Zap's dotfiles
 
-Just some configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
+Just configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
 
 ![](rice.png)
 
@@ -61,6 +61,7 @@ sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-14114
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
 sudo ./install.sh -S FiraCode   # Terminal font
+sudo ./install.sh -S VictorMono # Italic font
 sudo ./install.sh -S RobotoMono # UI font
 cd ..
 
