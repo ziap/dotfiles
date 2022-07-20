@@ -10,7 +10,7 @@ Just some configuration I made to learn more about Linux and desktop operating s
 - WM: [sway](https://swaywm.org/)
 - Shell: [zsh](https://www.zsh.org/)
 - Editor: [neovim](https://neovim.io/)
-- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
+- Terminal: [wezterm](https://wezfurlong.org/wezterm/)
 - Browser: [firefox](https://www.mozilla.org/en-US/firefox/)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
@@ -53,6 +53,9 @@ sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
   python3-pip ripgrep rofi slurp sqlite starship sway texlive util-linux-user \
   waybar wl-clipboard zathura zathura-pdf-mupdf zsh zsh-autosuggestions \
   zsh-syntax-highlighting
+
+# Install wezterm
+sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.fc36.x86_64.rpm
 
 # Install Fonts
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
