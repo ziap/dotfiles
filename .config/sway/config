@@ -14,7 +14,7 @@ set {
 
   $resize_factor 40px
 
-  $term kitty
+  $term wezterm
   $menu rofi -show drun | swaymsg
   $browser firefox
 }
