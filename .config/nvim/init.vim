@@ -1,3 +1,7 @@
+" +-------+
+" | VimRC |
+" +-------+
+
 " Search
 set showmatch
 set ignorecase

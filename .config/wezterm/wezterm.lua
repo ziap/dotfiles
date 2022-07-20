@@ -1,13 +1,38 @@
+-- +----------------------------+
+-- | WezTerm Configuration file |
+-- +----------------------------+
+
 local wezterm = require 'wezterm'
+
+local pad = 8
+
+local font_normal = {
+  family = 'FiraCode Nerd Font',
+  weight = 'Regular',
+  italic = false
+}
+
+local font_italic = {
+  family = 'VictorMono Nerd Font',
+  weight = 'DemiBold',
+  italic = true
+}
+
+function load_font(font)
+  return wezterm.font(font.family, {
+    weight = font.weight,
+    italic = font.italic
+  })
+end
 
 return {
   -- Window, layout
   window_decorations = 'NONE',
   window_padding = {
-    left = 0,
-    right = 0,
-    top = 0,
-    bottom = 0
+    left = pad,
+    right = pad,
+    top = pad,
+    bottom = pad
   },
   window_frame = {
     active_titlebar_bg = '#3c3836',
@@ -16,15 +41,12 @@ return {
   hide_tab_bar_if_only_one_tab = true,
   
   -- Fonts
-  font = wezterm.font('FiraCode Nerd Font', {weight = 'Regular'}),
+  font = load_font(font_normal),
   font_size = 14,
   font_rules = {
     {
       italic = true,
-      font = wezterm.font('VictorMono Nerd Font', {
-        weight = 'DemiBold',
-        italic = true
-      }) 
+      font = load_font(font_italic) 
     }
   },
 

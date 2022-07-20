@@ -43,7 +43,7 @@ exec_always ~/.config/sway/autotiling.py
 #
 bindsym {
   $mod+Return exec $term
-  $mod+q kill
+  $mod+w kill
   $mod+d exec $menu
   $mod+b exec $browser
   $mod+z exec swaylock
