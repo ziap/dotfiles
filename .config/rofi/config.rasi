@@ -6,6 +6,7 @@ configuration {
   show-icons: true;
   
   drun-display-format: " {name} ";
+  run-shell-command: "wezterm start {cmd}";
   sidebar-mode: true;
   matching: "fuzzy";
   scroll-method: 0;

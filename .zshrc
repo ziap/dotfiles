@@ -68,6 +68,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias duh='du -h'
+alias icat='wezterm imgcat'
 
 ## Quickly start a dev server
 alias sv='python -m http.server 3000'
