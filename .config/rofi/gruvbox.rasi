@@ -15,7 +15,7 @@ mode-switcher {
 }
 
 window {
-  width: 768px;
+  width: 648px;
   transparency: "real";
   border: 2px;
   border-color: @fg;
