@@ -70,18 +70,18 @@ return {
         '#458588', -- blue
         '#b16286', -- purple
         '#689d6a', -- aqua 
-        '#a89984'  -- gray
+        '#ebdbb2'  -- white
       },
 
       brights = {
-        '#7c6f64', -- black
+        '#928374', -- black
         '#fb4934', -- red
         '#b8bb26', -- green
         '#fabd2f', -- yellow
         '#83a598', -- blue
         '#d3869b', -- purple
         '#8ec07c', -- aqua
-        '#fbf1c7'  -- gray
+        '#fbf1c7'  -- white
       }
     }
   },
