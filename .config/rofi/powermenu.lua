@@ -1,4 +1,4 @@
-#!/usr/bin/lua
+#!/usr/bin/luajit
 
 local options = {
   [" Sleep"] = "systemctl suspend",

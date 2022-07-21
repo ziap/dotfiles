@@ -49,7 +49,7 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 
 # Install packages
 sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
-  grim light ImageMagick neovim nodejs npm pandoc playerctl python3 \
+  grim light lua ImageMagick neovim nodejs npm pandoc playerctl python3 \
   python3-pip ripgrep rofi slurp sqlite starship sway texlive util-linux-user \
   waybar wl-clipboard zathura zathura-pdf-mupdf zsh zsh-autosuggestions \
   zsh-syntax-highlighting
