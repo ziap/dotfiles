@@ -16,6 +16,8 @@ set {
 
   $term wezterm
   $menu rofi -show drun | swaymsg
+  $file rofi -show filebrowser | swaymsg
+  $power rofi -show powermenu | swaymsg
   $browser firefox
 }
 
@@ -44,8 +46,10 @@ exec_always ~/.config/sway/autotiling.py
 bindsym {
   $mod+Return exec $term
   $mod+w kill
-  $mod+d exec $menu
+  $mod+Shift+Return exec $menu
   $mod+b exec $browser
+  $mod+e exec $file
+  $mod+x exec $power
   $mod+z exec swaylock
   $mod+Shift+c reload
 }
@@ -149,61 +153,6 @@ bindsym {
   # If there are multiple scratchpad windows, this command cycles through them.
   $mod+minus scratchpad show
 }
-
-#
-# Exit mode:
-#
-set {
-  $exit-poweroff "Are you sure you want to shut down (Y/n)"
-  $exit-reboot "Are you sure you want to restart (Y/n)"
-  $exit-logout "Are you sure you want to logout (Y/n)"
-  $exit "Exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
-}
-
-mode $exit-poweroff {
-  bindsym --to-code {
-    y exec systemctl poweroff
-    Return exec systemctl poweroff
-
-    n mode "default"
-    Escape mode "default"
-  } 
-}
-
-mode $exit-reboot {
-  bindsym --to-code {
-    y exec systemctl reboot
-    Return exec systemctl reboot
-
-    n mode "default"
-    Escape mode "default"
-  } 
-}
-
-mode $exit-logout {
-  bindsym --to-code {
-    y exec swaymsg exit
-    Return exec swaymsg exit
-
-    n mode "default"
-    Escape mode "default"
-  } 
-}
-
-mode $exit {
-  bindsym --to-code {
-    s exec systemctl suspend, mode "default"
-    p mode $exit-poweroff
-    r mode $exit-reboot
-    l mode $exit-logout
-
-    Return mode "default"
-    Escape mode "default"
-    $mod+x mode "default"
-  }
-}
-
-bindsym --to-code $mod+x mode $exit
 
 #
 ### Screenshot mode:

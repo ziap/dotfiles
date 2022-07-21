@@ -1,6 +1,7 @@
 configuration {
-  modi: "drun,run,filebrowser";
+  modi: "drun,run,filebrowser,powermenu:~/.config/rofi/powermenu.lua";
   
+  hover-select: true;
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
   show-icons: true;
@@ -15,6 +16,7 @@ configuration {
   display-drun: "異 Apps";
   display-run: " Run";
   display-filebrowser: " Files";
+  display-powermenu: " Power";
 
   combi-modi: "drun,run";
   sort: true;
@@ -31,4 +33,4 @@ configuration {
   }
 }
 
-@theme "gruvbox.rasi"
+@theme "theme.rasi"

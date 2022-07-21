@@ -29,6 +29,7 @@ textbox-prompt-colon {
   expand: false;
 }
 
+
 entry {
   placeholder: "Search";
   placeholder-color: @fg;

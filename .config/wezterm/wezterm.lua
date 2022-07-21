@@ -27,7 +27,6 @@ end
 
 return {
   -- Window, layout
-  window_decorations = 'NONE',
   window_padding = {
     left = pad,
     right = pad,
