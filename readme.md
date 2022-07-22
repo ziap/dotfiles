@@ -1,6 +1,6 @@
 # Zap's dotfiles
 
-Just configuration I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
+Just some configurations I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
 
 ![](rice.png)
 
