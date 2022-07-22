@@ -4,7 +4,7 @@
 
 local wezterm = require 'wezterm'
 
-local pad = 8
+local pad = 0
 
 local font_normal = {
   family = 'FiraCode Nerd Font',
