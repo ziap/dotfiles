@@ -86,8 +86,8 @@ endif
 set background=dark " or light if you want light mode
 colorscheme gruvbox
 let g:airline_theme='base16_gruvbox_dark_medium'
-let g:airline_left_sep = "\uE0B4"
-let g:airline_right_sep = "\uE0B6"
+let g:airline_left_sep = "\uE0B8"
+let g:airline_right_sep = "\uE0BA"
 
 lua require'plugins'
 
