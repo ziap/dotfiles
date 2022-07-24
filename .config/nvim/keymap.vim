@@ -20,4 +20,3 @@ nnoremap <silent> <c-k> <cmd>wincmd k<cr>
 nnoremap <silent> <c-j> <cmd>wincmd j<cr>
 nnoremap <silent> <c-h> <cmd>wincmd h<cr>
 nnoremap <silent> <c-l> <cmd>wincmd l<cr>
-nnoremap <leader><leader> <cmd>vertical split<cr><cmd>Telescope find_files hidden=true<cr>

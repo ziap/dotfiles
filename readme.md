@@ -1,6 +1,10 @@
-# Zap's dotfiles
+<div align="center">
 
-Just some configurations I made to learn more about Linux and desktop operating system in general, optimizing my workflow and making something that looks good.
+# SwayWM dotfiles
+
+A custom wayland desktop environment fine-tuned to my development workflow and daily usage.
+
+</div>
 
 ![](rice.png)
 
@@ -20,7 +24,7 @@ Just some configurations I made to learn more about Linux and desktop operating 
 
 - ✨ Minimal and aesthetic gruvbox themed desktop
 - 🍱 Window management with autotiling
-- 🗨️ Lightweight yet powerful ZSH shell with starship prompt
+- 🗨️  Lightweight yet powerful ZSH shell with starship prompt
 - 🚀 Functional developer environment for
     + C and C++
     + Vanilla web development
@@ -36,9 +40,9 @@ Just some configurations I made to learn more about Linux and desktop operating 
 
 ### Plan
 
+- Add more rofi menus
 - Rust, Svelte development environment
 - Notification with dunst
-- Wifi, bluetooth and more widgets with eww
 - Setup on a more minimal Fedora installation
 
 ## Installation
@@ -57,14 +61,6 @@ sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
 # Install wezterm
 sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.fc36.x86_64.rpm
 
-# Install Fonts
-git clone --depth=1 https://github.com/ryanoasis/nerd-fonts
-cd nerd-fonts
-sudo ./install.sh -S FiraCode   # Terminal font
-sudo ./install.sh -S VictorMono # Italic font
-sudo ./install.sh -S RobotoMono # UI font
-cd ..
-
 # Clone this repo
 git clone --depth=1 https://github.com/ziap/dotfiles
 cd dotfiles
@@ -74,7 +70,8 @@ chsh -s $(which zsh)
 cp .zshrc ~
 
 # Copy files
-cp -r .config ~
+cp -rp .config ~
+cp -rp .local ~
 
 # Make zathura the default pdf reader
 xdg-mime default org.pwmt.zathura.desktop application/pdf
