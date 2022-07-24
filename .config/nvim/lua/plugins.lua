@@ -80,26 +80,3 @@ require'nvim-treesitter.configs'.setup{
 
   highlight = { enable = true }
 }
-
-require'nvim-tree'.setup{}
-
-require'bufferline'.setup{
-  options = {
-    -- NvimTree supports
-    offsets = {
-      {
-        filetype = "NvimTree",
-        text = "Explorer", 
-        highlight = "Directory",
-        text_align = "left"
-      }
-    },
-
-    -- Error message
-    diagnostics = "nvim_lsp",
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      local icon = level:match("error") and " " or " "
-      return " " .. icon .. count
-    end
-  }
-}
