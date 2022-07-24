@@ -160,9 +160,9 @@ bindsym {
 set {
   $screenshot "Screenshot: [s]creen [w]window [r]egion"
  
-  $screenshot-screen grim
-  $screenshot-region grim -g "$(slurp)"
-  $screenshot-window ~/.config/sway/screenshot-win.sh
+  $screenshot-screen grim - | wl-copy
+  $screenshot-region grim -g "$(slurp)" - | wl-copy
+  $screenshot-window ~/.config/sway/screenshot-win.sh | wl-copy
 }
 
 mode $screenshot {

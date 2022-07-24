@@ -39,8 +39,8 @@ widget > * {
 }
 
 .modules-left > widget > * {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .modules-left > widget:first-child > * {
@@ -48,11 +48,11 @@ widget > * {
 }
 
 .modules-left > widget:last-child > * {
-  margin-right: 32px;
+  margin-right: 24px;
 }
 
 .modules-right > widget > * {
-  padding: 0 16px;
+  padding: 0 12px;
   margin-left: 0;
   margin-right: 0;
   color: #282828;

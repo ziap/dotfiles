@@ -1,7 +1,6 @@
 configuration {
   modi: "drun,run,filebrowser,powermenu:~/.config/rofi/powermenu.lua";
   
-  hover-select: true;
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
   show-icons: true;

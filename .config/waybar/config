@@ -1,10 +1,10 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "backlight", "network", "battery"],
+  "modules-left": ["sway/workspaces", "sway/window", "sway/mode"],
+  "modules-center": [],
+  "modules-right": ["pulseaudio", "backlight", "network", "battery", "clock"],
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{: %a, %b %d  -   %I:%M %p}"
+    "format": "{:%b %d(%H:%M) }"
   },
   "backlight": {
     "format": "{percent}% {icon}",
