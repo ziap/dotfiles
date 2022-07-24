@@ -48,35 +48,3 @@ cmp.setup.cmdline(':', {
   })
 })
 
-local lsconf = { 
-  -- Enable completion
-  capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  
-  -- Formatting on save
-  on_attach = function(client, bufnr)
-    if client.server_capabilities.documentFormattingProvider then
-      vim.api.nvim_command [[augroup Format]]
-      vim.api.nvim_command [[autocmd! * <buffer>]]
-      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-      vim.api.nvim_command [[augroup END]]
-    end
-  end
-}
-
-local lspconfig = require'lspconfig'
-lspconfig.pyright.setup(lsconf)
-lspconfig.clangd.setup(lsconf)
-lspconfig.html.setup(lsconf)
-lspconfig.cssls.setup(lsconf) 
-lspconfig.tsserver.setup(lsconf)
-lspconfig.emmet_ls.setup(lsconf)
-
-require'lspsaga'.init_lsp_saga{}
-require'nvim-autopairs'.setup{}
-require'nvim-treesitter.configs'.setup{
-  ensure_installed = { "python", "lua", "c", "cpp", "rust", "javascript", "html", "css", "markdown" },
-    
-  sync_install = false,
-
-  highlight = { enable = true }
-}

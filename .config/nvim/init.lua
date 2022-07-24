@@ -1,0 +1,7 @@
+require'options'
+require'plugins.load'
+require'plugins.cmp'
+require'plugins.lsp'
+require'plugins.others'
+require'theme'
+require'keymap'
