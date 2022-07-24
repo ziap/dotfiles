@@ -6,9 +6,9 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 </div>
 
-![](rice.png)
-
 ## Informations
+
+<img alt="screenshot" align="right" width="400px" src="rice.png"/>
 
 - OS: [Fedora Linux](https://getfedora.org/)
 - WM: [sway](https://swaywm.org/)
