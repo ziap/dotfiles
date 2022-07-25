@@ -1,6 +1,6 @@
--- Search
 local opt = vim.opt
 
+-- Search
 opt.showmatch = true
 opt.ignorecase = true
 opt.smartcase = true

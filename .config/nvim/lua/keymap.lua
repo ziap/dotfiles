@@ -1,3 +1,4 @@
+-- Simplify vim api's verbose syntax
 function bind(mode)
   return function(lhs, rhs, silent)
     local options = {
@@ -23,14 +24,14 @@ nmap('<leader>b', ':Telescope buffers<cr>')
 nmap('<leader>h', ':Telescope help_tags<cr>')
 nmap('<leader>e', ':Telescope file_browser<cr>')
 
-local exit_term = '<c-\\><c-n>'
-
 -- Move around split windows
 nmap('<c-h>', ':wincmd h<cr>', true)
 nmap('<c-j>', ':wincmd j<cr>', true)
 nmap('<c-k>', ':wincmd k<cr>', true)
 nmap('<c-l>', ':wincmd l<cr>', true)
 
+-- Make working with terminal windows easier
+local exit_term = '<c-\\><c-n>'
 tmap('<esc>', exit_term, true)
 tmap('<c-h>', exit_term..':wincmd h<cr>', true)
 tmap('<c-j>', exit_term..':wincmd j<cr>', true)
