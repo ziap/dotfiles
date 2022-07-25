@@ -15,14 +15,14 @@ nmap('gh', ':Lspsaga lsp_finder<cr>', true)
 nmap('gr', ':Lspsaga rename<cr>', true)
 
 vim.g.mapleader = ' '
-nmap('<leader>f', ':Telescope find_files hidden=true<cr>')
+nmap('<leader>f', ':Telescope find_files<cr>')
 nmap('<leader>g', ':Telescope live_grep<cr>')
 nmap('<leader>b', ':Telescope buffers<cr>')
 nmap('<leader>h', ':Telescope help_tags<cr>')
 nmap('<leader><leader>', ':vertical split<cr>')
 
 -- Move around split windows
-nmap('<c-h>', ':wincmd h<cr>')
-nmap('<c-j>', ':wincmd j<cr>')
-nmap('<c-k>', ':wincmd k<cr>')
-nmap('<c-l>', ':wincmd l<cr>')
+nmap('<c-h>', ':wincmd h<cr>', true)
+nmap('<c-j>', ':wincmd j<cr>', true)
+nmap('<c-k>', ':wincmd k<cr>', true)
+nmap('<c-l>', ':wincmd l<cr>', true)

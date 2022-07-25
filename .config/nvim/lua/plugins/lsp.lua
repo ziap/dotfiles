@@ -1,11 +1,11 @@
 -- For ease of adding servers
 local servers = {
-  "pyright",
-  "clangd",
-  "html",
-  "cssls",
-  "tsserver",
-  "emmet_ls"
+  'pyright',
+  'clangd',
+  'html',
+  'cssls',
+  'tsserver',
+  'emmet_ls'
 }
 
 for i, name in ipairs(servers) do
