@@ -9,7 +9,7 @@ local servers = {
 }
 
 for i, name in ipairs(servers) do
-  require'lspconfig'[name].setup({ 
+  require'lspconfig'[name].setup{ 
     -- Enable completion
     capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities()),
     
@@ -22,7 +22,7 @@ for i, name in ipairs(servers) do
         vim.api.nvim_command [[augroup END]]
       end
     end
-  })
+  }
 end
 
 require'lspsaga'.init_lsp_saga{}

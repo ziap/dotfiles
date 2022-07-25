@@ -25,10 +25,9 @@ vim.call('plug#begin', '~/.vim/plugged')
   Plug'windwp/nvim-ts-autotag'
   Plug'nvim-lua/plenary.nvim'
   
-  -- File selectior
+  -- Telescope
   Plug'nvim-telescope/telescope.nvim'
-  Plug'kyazdani42/nvim-web-devicons'
-  Plug'kyazdani42/nvim-tree.lua'
+  Plug'nvim-telescope/telescope-file-browser.nvim'
 vim.call'plug#end'
 
 require'plugins-config'
