@@ -108,4 +108,4 @@ You can automatically start fcitx by adding `exec_always fcitx5` to sway config 
 
 # License
 
-This project is licensed under the [MIT license](LICENSE).
+This project is licensed under the [AGPL-3.0 license](LICENSE).
