@@ -47,6 +47,8 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 ## Installation
 
+### Base install
+
 ```bash
 # Enable rpmfusion
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -86,6 +88,23 @@ sudo npm i -g pyright vscode-langservers-extracted typescript \
 ```
 
 Log out from your current session and login to sway
+
+### If you want to use IME
+
+```bash
+sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool
+sudo dnf install fcitx5-unikey # Or your IME
+```
+
+Write these to `/etc/environment`
+
+```bash
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+```
+
+You can automatically start fcitx by adding `exec_always fcitx5` to sway config but I prefer manually starting it in rofi.
 
 # License
 
