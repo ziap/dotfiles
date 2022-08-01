@@ -70,6 +70,12 @@ alias lla='ls -la'
 alias duh='du -h'
 alias icat='wezterm imgcat'
 
+## Fuzzy finder utilities
+alias sk='sk --reverse'
+alias frm='rm -rf $(exa | sk -m)'
+alias fcd='cd $(fd --type=d | sk)'
+alias fgd='cd $(dirname $(fd -H -g \*.git ~/*/) | sk)'
+
 ## Quickly start a dev server
 alias sv='python -m http.server 3000'
 
