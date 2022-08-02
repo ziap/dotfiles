@@ -19,6 +19,7 @@ set {
   $file rofi -show filebrowser | swaymsg
   $power rofi -show powermenu | swaymsg
   $browser firefox
+  $private-browser firefox --private-window
 }
 
 gaps inner 8
@@ -48,6 +49,7 @@ bindsym {
   $mod+w kill
   $mod+Shift+Return exec $menu
   $mod+b exec $browser
+  $mod+Shift+b exec $private-browser
   $mod+e exec $file
   $mod+x exec $power
   $mod+z exec swaylock
