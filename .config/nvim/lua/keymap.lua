@@ -14,13 +14,15 @@ local imap = bind('i') -- inoremap
 local vmap = bind('v') -- vnoremap
 local tmap = bind('t') -- tnoremap
 
+-- Set leader key
+vim.g.mapleader = ' '
+
 -- Lspsaga keybinds
 nmap('K', ':Lspsaga hover_doc<cr>', true)
 nmap('gh', ':Lspsaga lsp_finder<cr>', true)
 nmap('gr', ':Lspsaga rename<cr>', true)
 
 -- Telescope keybinds
-vim.g.mapleader = ' '
 nmap('<leader>f', ':Telescope find_files<cr>')
 nmap('<leader>g', ':Telescope live_grep<cr>')
 nmap('<leader>b', ':Telescope buffers<cr>')
@@ -47,7 +49,12 @@ nmap('<leader><cr>', ':split<cr>', true)
 nmap('<leader>t', ':terminal<cr>', true)
 nmap('<leader>w', ':q<cr>', true)
 
+-- Keybinds with shift
 nmap('Y', 'y$') -- Yank to the end
+nmap('J', 'j$') -- Move to end of next line
+vmap('J', 'j$')
+nmap('K', 'k$') -- Move to end of last line
+vmap('K', 'k^') -- In visual mode, move to beginning instead
 nmap('U', ':redo<cr>') -- Redo
 
 -- Replace text
