@@ -18,7 +18,7 @@ local tmap = bind('t') -- tnoremap
 vim.g.mapleader = ' '
 
 -- Lspsaga keybinds
-nmap('K', ':Lspsaga hover_doc<cr>', true)
+nmap('<leader>k', ':Lspsaga hover_doc<cr>', true)
 nmap('gh', ':Lspsaga lsp_finder<cr>', true)
 nmap('gr', ':Lspsaga rename<cr>', true)
 

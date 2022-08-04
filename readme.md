@@ -8,7 +8,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 ## Informations
 
-<img alt="screenshot" align="right" width="400px" src="rice.png"/>
+<img alt="screenshot" align="right" width="400px" src="img/rice.png"/>
 
 - OS: [Fedora Linux](https://getfedora.org/)
 - WM: [sway](https://swaywm.org/)
@@ -47,49 +47,117 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 ## Installation
 
-### Base install
+### Clone repository
 
 ```bash
-# Enable rpmfusion
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-
-# Install packages
-sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
-  grim light lua ImageMagick neovim nodejs npm pandoc playerctl \
-  pulseaudio-utils python3 python3-pip ripgrep rofi slurp sqlite starship sway \
-  skim texlive util-linux-user waybar wl-clipboard zathura zathura-pdf-mupdf \
-  zsh zsh-autosuggestions zsh-syntax-highlighting
-
-# Install wezterm
-sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.fc36.x86_64.rpm
-
-# Clone this repo
 git clone --depth=1 https://github.com/ziap/dotfiles
 cd dotfiles
 
-# Setup zsh
-chsh -s $(which zsh)
-cp .zshrc ~
-
-# Copy files
 cp -rp .config ~
+```
+
+### RPMFusion and media codecs
+
+```bash
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf install @multimedia
+```
+
+### Fonts
+
+Install fonts to local font directory `~/.local/share/fonts`
+
+Fonts being used are:
+  - FiraCode (terminal, editor font)
+  - VictorMono (italic font)
+  - RobotoMono (UI font)
+
+```bash
+# Install fonts
 cp -rp .local ~
+```
 
-# Make zathura the default pdf reader
-xdg-mime default org.pwmt.zathura.desktop application/pdf
+### Terminal + Shell setup
 
-# Install vim-plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+![](img/terminal.png)
 
-# Install Neovim language servers
+Install wezterm
+
+```bash
+sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.fc36.x86_64.rpm
+```
+
+Install and setup zsh, some plugins and starship prompt
+
+```bash
+sudo dnf install util-linux-user zsh zsh-autosuggestions zsh-syntax-highlighting starship
+
+chsh -s $(which zsh)
+cp .zshrc ~ 
+```
+
+Install extra packages
+
+```bash
+sudo dnf install sqlite ImageMagick bat exa ripgrep fd-find skim
+```
+
+- `sqlite`: for dnf autocompletion
+- `ImageMagick`: for command line image editing
+- `bat`, `exa`: Syntax highlighting, icons for `cat` and `ls`
+- `ripgrep`, `fd-find`: Faster `grep` and `find`
+- `skim`: Fuzzy finder
+
+### Desktop environment setup
+
+![](img/desktop.png)
+
+```bash
+sudo dnf install sway rofi waybar luajit slurp grim light pulseaudio-utils wl-clipboard
+```
+
+- `luajit`: Run Lua rofi scripts
+- `grim`, `slurp`: Screenshot tool
+- `light`, `pulseaudio-utils`: Control screen brightness and audio volume
+- `wl-clipboard`: Clipboard tool
+
+### Developer environment setup
+
+![](img/vim.png)
+
+The packages for each programming languages are pretty self-explanatory
+
+```bash
+sudo dnf install neovim git python3 python3-pip nodejs npm gcc gcc-c++ clang-tools-extra
+```
+
+Install language servers
+
+```bash
 sudo npm i -g pyright vscode-langservers-extracted typescript \
   typescript-language-server emmet-ls
 ```
 
-Log out from your current session and login to sway
+Install plugins
 
-### If you want to use IME
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+nvim -c PlugInstall
+```
+
+### Document editing workflow setup
+
+```bash
+sudo dnf install pandoc texlive zathura zathura-pdf-mupdf
+
+# Make zathura the default pdf reader
+xdg-mime default org.pwmt.zathura.desktop application/pdf
+```
+
+### IME Setup
 
 ```bash
 sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool
@@ -108,4 +176,4 @@ You can automatically start fcitx by adding `exec_always fcitx5` to sway config 
 
 # License
 
-This project is licensed under the [AGPL-3.0 license](LICENSE).
+This project is licensed under the [GPL-3.0 license](LICENSE).
