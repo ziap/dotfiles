@@ -55,10 +55,10 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 
 # Install packages
 sudo dnf install @multimedia bat clang-tools-extra exa fd-find gcc gcc-c++ git \
-  grim light lua ImageMagick neovim nodejs npm pandoc playerctl python3 \
-  python3-pip ripgrep rofi slurp sqlite starship sway texlive util-linux-user \
-  waybar wl-clipboard zathura zathura-pdf-mupdf zsh zsh-autosuggestions \
-  zsh-syntax-highlighting
+  grim light lua ImageMagick neovim nodejs npm pandoc playerctl \
+  pulseaudio-utils python3 python3-pip ripgrep rofi slurp sqlite starship sway \
+  skim texlive util-linux-user waybar wl-clipboard zathura zathura-pdf-mupdf \
+  zsh zsh-autosuggestions zsh-syntax-highlighting
 
 # Install wezterm
 sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.fc36.x86_64.rpm

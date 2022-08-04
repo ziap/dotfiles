@@ -51,7 +51,7 @@ bindsym {
   $mod+b exec $browser
   $mod+Shift+b exec $private-browser
   $mod+e exec $file
-  $mod+x exec $power
+  $mod+q exec $power
   $mod+z exec swaylock
   $mod+Shift+c reload
 }

@@ -29,5 +29,3 @@ vim.call('plug#begin', '~/.vim/plugged')
   Plug'nvim-telescope/telescope.nvim'
   Plug'nvim-telescope/telescope-file-browser.nvim'
 vim.call'plug#end'
-
-require'plugins-config'
