@@ -148,6 +148,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim -c PlugInstall
 ```
 
+### Firefox setup
+
+![](img/firefox.png)
+
+- Gruvbox cascade [userChrome.css](https://gist.github.com/ziap/be9576c3bcdcb7de6b47a2ba45aa3725)
+- [Dark reader](https://darkreader.org/) with gruvbox theme
+
 ### Document editing workflow setup
 
 ```bash
