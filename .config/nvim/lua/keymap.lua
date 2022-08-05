@@ -18,9 +18,11 @@ local tmap = bind('t') -- tnoremap
 vim.g.mapleader = ' '
 
 -- Lspsaga keybinds
-nmap('<leader>k', ':Lspsaga hover_doc<cr>', true)
-nmap('gh', ':Lspsaga lsp_finder<cr>', true)
-nmap('gr', ':Lspsaga rename<cr>', true)
+nmap('<leader>r', ':Lspsaga rename<cr>', true)
+nmap('<leader>c', ':Lspsaga code_action<cr>', true)
+nmap('<leader>d', ':Lspsaga lsp_finder<cr>', true)
+nmap('K', ':Lspsaga hover_doc<cr>', true)
+nmap('J', ':Lspsaga diagnostic_jump_next<cr>', true)
 
 -- Telescope keybinds
 nmap('<leader>f', ':Telescope find_files<cr>')
@@ -51,11 +53,9 @@ nmap('<leader>w', ':q<cr>', true)
 
 -- Keybinds with shift
 nmap('Y', 'y$') -- Yank to the end
-nmap('J', 'j$') -- Move to end of next line
-vmap('J', 'j$')
-nmap('K', 'k$') -- Move to end of last line
-vmap('K', 'k^') -- In visual mode, move to beginning instead
 nmap('U', ':redo<cr>') -- Redo
+vmap('J', 'j$') -- Select last line
+vmap('K', 'k^') -- Select next line
 
 -- Replace text
 nmap('s', ':s//g<left><left>') -- Line

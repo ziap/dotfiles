@@ -25,5 +25,14 @@ for i, name in ipairs(servers) do
   }
 end
 
-require'lspsaga'.init_lsp_saga{}
-
+require'lspsaga'.init_lsp_saga{
+  border_style = 'rounded',
+  finder_action_keys = {
+    open = '<cr>',
+    vsplit = 'v',
+    split = 'h',
+    quit = 'q',
+    scroll_down = '<C-f>',
+    scroll_up = '<C-b>', -- quit can be a table
+  }
+}
