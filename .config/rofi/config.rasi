@@ -4,6 +4,8 @@ configuration {
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
   show-icons: true;
+  icon-theme: "ePapirus";
+  application-fallback-icon: "run-build";
   
   drun-display-format: " {name} ";
   run-shell-command: "wezterm start {cmd}";

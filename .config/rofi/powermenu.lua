@@ -4,23 +4,28 @@
 -- It's also easier to add options or edit them this way
 local options = {
   {
-    name = " Sleep",
+    icon = "system-suspend",
+    name = "Sleep",
     command = "systemctl suspend"
   },
   {
-    name = " Shut down",
+    icon = "system-shutdown",
+    name = "Shut down",
     command = "systemctl poweroff"
   },
   {
-    name = " Restart",
+    icon = "system-reboot",
+    name = "Restart",
     command = "systemctl reboot"
   },
   {
-    name = " Lock",
+    icon = "system-lock-screen",
+    name = "Lock",
     command = "swaylock"
   },
   {
-    name = " Log out",
+    icon = "system-log-out",
+    name = "Log out",
     command = "swaymsg exit"
   }
 }
@@ -40,5 +45,5 @@ if selection then
 end
 
 for i, opt in ipairs(options) do
-  print(opt.name)
+  print(opt.name.."\0icon\x1f"..opt.icon)
 end
