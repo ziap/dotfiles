@@ -4,46 +4,39 @@
 -- It's also easier to add options or edit them this way
 local options = {
   {
-    icon = "system-suspend",
     name = "Sleep",
+    icon = "system-suspend",
     command = "systemctl suspend"
   },
   {
-    icon = "system-shutdown",
     name = "Shut down",
+    icon = "system-shutdown",
     command = "systemctl poweroff"
   },
   {
-    icon = "system-reboot",
     name = "Restart",
+    icon = "system-reboot",
     command = "systemctl reboot"
   },
   {
-    icon = "system-lock-screen",
     name = "Lock",
+    icon = "system-lock-screen",
     command = "swaylock"
   },
   {
-    icon = "system-log-out",
     name = "Log out",
+    icon = "system-log-out",
     command = "swaymsg exit"
   }
 }
 
-local opt_map = {}
 for i, opt in ipairs(options) do
-  opt_map[opt.name] = opt.command
-end
-
-local selection = arg[1]
-
-if selection then
-  if opt_map[selection] then
-    io.popen(opt_map[selection]) 
+  if arg[1] then
+    if opt.name == arg[1] then
+      io.popen(opt.command..' &')
+      os.exit(1)
+    end
+  else
+    print(opt.name..'\0icon\x1f'..opt.icon)
   end
-  os.exit()
-end
-
-for i, opt in ipairs(options) do
-  print(opt.name.."\0icon\x1f"..opt.icon)
 end
