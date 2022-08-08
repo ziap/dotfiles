@@ -5,7 +5,8 @@ local servers = {
   'html',
   'cssls',
   'tsserver',
-  'emmet_ls'
+  'emmet_ls',
+  'rust_analyzer'
 }
 
 for i, name in ipairs(servers) do

@@ -27,6 +27,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 - 🗨️  Lightweight yet powerful ZSH shell with starship prompt
 - 🚀 Functional developer environment for
     + C and C++
+    + Rust
     + Vanilla web development
     + Python
 - 📄 Document editing with markdown, latex, pandoc and reveal.js
@@ -41,7 +42,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 ### Plan
 
 - Add more rofi menus
-- Rust, Svelte development environment
+- Svelte developer environment
 - Notification with dunst
 - Setup on a more minimal Fedora installation
 
@@ -85,7 +86,7 @@ cp -rp .local ~
 Install wezterm
 
 ```bash
-sudo dnf install https://github.com/wez/wezterm/releases/download/20220624-141144-bd1b7c5d/wezterm-20220624_141144_bd1b7c5d-1.fc36.x86_64.rpm
+sudo dnf install https://github.com/wez/wezterm/releases/download/20220807-113146-c2fee766/wezterm-20220807_113146_c2fee766-1.fedora36.x86_64.rpm
 ```
 
 Install and setup zsh, some plugins and starship prompt
@@ -138,6 +139,26 @@ Install language servers
 ```bash
 sudo npm i -g pyright vscode-langservers-extracted typescript \
   typescript-language-server emmet-ls
+```
+
+Install rust and rust-analyzer
+
+```bash
+# During install select nightly profile
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+rustup component add rust-analyzer
+```
+
+While rust-analyzer isn't added to `.cargo/bin` by default
+
+```bash
+cat << EOF > .cargo/bin/rust-analyzer
+#!/bin/sh
+rustup run nightly rust-analyzer
+EOF
+
+chmod +x .cargo/bin/rust-analyzer
 ```
 
 Install plugins

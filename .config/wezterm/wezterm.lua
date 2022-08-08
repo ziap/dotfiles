@@ -41,7 +41,7 @@ return {
   
   -- Fonts
   font = load_font(font_normal),
-  font_size = 14,
+  font_size = 12,
   font_rules = {
     {
       italic = true,
