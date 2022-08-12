@@ -45,11 +45,13 @@ tmap('<c-j>', exit_term..':wincmd j<cr>', true)
 tmap('<c-k>', exit_term..':wincmd k<cr>', true)
 tmap('<c-l>', exit_term..':wincmd l<cr>', true)
 
--- Create and remove split windows
-nmap('<leader><leader>', ':vertical split<cr>', true)
-nmap('<leader><cr>', ':split<cr>', true)
-nmap('<leader>t', ':terminal<cr>', true)
-nmap('<leader>w', ':q<cr>', true)
+-- Toggle terminal
+nmap('<a-t>', ':new<cr>:terminal<cr>:resize 15<cr>:startinsert<cr>')
+tmap('<a-t>', exit_term..':bwipeout!<cr>', true)
+
+-- Create split panes
+nmap('<leader><leader>', ':vertical new<cr>', true)
+nmap('<leader><cr>', ':new<cr>', true)
 
 -- Keybinds with shift
 nmap('Y', 'y$') -- Yank to the end
