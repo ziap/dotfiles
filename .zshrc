@@ -86,11 +86,6 @@ alias mdc='pandoc \
   -V "numbersections:true" \
   -V "geometry:margin=30mm"'
 
-# ---- CHANGE XTERM TITLE -----------------------
-case $TERM in
-    xterm*) precmd () { print -Pn '\e]0;%~\a' };;
-esac
-
 # ---- PLUGINS ----------------------------------
 
 ## Starship phrompt
