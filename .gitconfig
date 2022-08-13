@@ -1,0 +1,11 @@
+[user]
+	name = Zap
+	email = 67962871+ziap@users.noreply.github.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[merge]
+	tool = nvimdiff3

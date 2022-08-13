@@ -22,11 +22,23 @@ set {
   $private-browser firefox --private-window
 }
 
-gaps inner 8
 default_border pixel 2
 default_floating_border pixel 2
 
+#
+# Focus layout
+#
+# output * bg #3c3836 solid_color
+# gaps outer 2
+# smart_borders on
+# smart_gaps inverse_outer
+
+#
+# Aesthetic layout
+#
 output * bg ~/.config/wallpaper.png fill
+gaps inner 8
+
 
 input type:touchpad {
   tap enabled

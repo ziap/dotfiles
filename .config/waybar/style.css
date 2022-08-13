@@ -11,7 +11,7 @@ window#waybar {
   color: #ebdbb2;
   transition-property: background-color;
   transition-duration: 0.5s;
-  border-bottom: solid 2px #3c3836;
+  border-bottom: solid 0px #3c3836;
 }
 
 window#waybar.hidden {
@@ -35,8 +35,8 @@ window#waybar.hidden {
 }
 
 widget > * {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .modules-left > widget > * {
@@ -45,11 +45,11 @@ widget > * {
 }
 
 .modules-left > widget:first-child > * {
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 .modules-left > widget:last-child > * {
-  margin-right: 24px;
+  margin-right: 18px;
 }
 
 .modules-right > widget > * {
@@ -66,7 +66,7 @@ widget > * {
 
 .modules-right > widget:last-child > * {
   border-radius: 0 5px 5px 0;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 #mode {
