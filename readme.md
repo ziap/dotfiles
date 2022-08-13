@@ -150,15 +150,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rust-analyzer
 ```
 
-While rust-analyzer isn't added to `.cargo/bin` by default
+While rust-analyzer isn't added to `~/.cargo/bin` by default
 
 ```bash
-cat << EOF > .cargo/bin/rust-analyzer
+cat << EOF > ~/.cargo/bin/rust-analyzer
 #!/bin/sh
 rustup run nightly rust-analyzer
 EOF
 
-chmod +x .cargo/bin/rust-analyzer
+chmod +x ~/.cargo/bin/rust-analyzer
 ```
 
 Install plugins
