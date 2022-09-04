@@ -83,10 +83,10 @@ cp -rp .local ~
 
 ![](img/terminal.png)
 
-Install wezterm
+Install wezterm by going to [the release page](https://github.com/wez/wezterm/releases/latest) and grab the lastest fedora rpm file.
 
 ```bash
-sudo dnf install https://github.com/wez/wezterm/releases/download/20220807-113146-c2fee766/wezterm-20220807_113146_c2fee766-1.fedora36.x86_64.rpm
+sudo dnf install https://github.com/wez/wezterm/releases/download/---.fedora36.x86_64.rpm
 ```
 
 Install and setup zsh, some plugins and starship prompt
