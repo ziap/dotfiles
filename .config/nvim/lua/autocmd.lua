@@ -12,7 +12,7 @@ autocmd(
 -- Highlight terminal output
 -- NOTE: don't enable yaml treesitter for this to work
 autocmd(
-  { 'TermEnter' },
+  { 'TermOpen' },
   {
     command = 'set filetype=yaml'
   }
