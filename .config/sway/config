@@ -83,6 +83,10 @@ bindsym --locked {
   XF86AudioPlay exec playerctl play-pause
   XF86AudioNext exec playerctl next
   XF86AudioPrev exec playerctl previous
+
+  $mod+p exec playerctl play-pause
+  $mod+Period exec playerctl next
+  $mod+Comma exec playerctl previous
 }
 
 # Drag floating windows by holding down $mod and left mouse button.
@@ -174,16 +178,14 @@ bindsym {
 set {
   $screenshot "Screenshot: [s]creen [w]window [r]egion"
  
-  $screenshot-screen grim - | wl-copy
-  $screenshot-region grim -g "$(slurp)" - | wl-copy
-  $screenshot-window ~/.config/sway/screenshot-win.sh | wl-copy
+  $screenshot-cmd ~/.config/sway/screenshot.sh
 }
 
 mode $screenshot {
   bindsym --to-code {
-    s mode "default", exec $screenshot-screen
-    w mode "default", exec $screenshot-window 
-    r mode "default", exec $screenshot-region
+    s mode "default", exec $screenshot-cmd screen
+    w mode "default", exec $screenshot-cmd window 
+    r mode "default", exec $screenshot-cmd region 
 
     Return mode "default"
     Escape mode "default"
@@ -191,7 +193,7 @@ mode $screenshot {
   }
 }
 
-bindsym --to-code $mod+p mode $screenshot
+bindsym --to-code $mod+s mode $screenshot
 
 ### Theming
 #
