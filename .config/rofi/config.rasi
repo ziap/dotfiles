@@ -1,5 +1,5 @@
 configuration {
-  modi: "drun,run,filebrowser,powermenu:~/.config/rofi/powermenu.lua";
+  modi: "drun,run,ssh,filebrowser,powermenu:~/.config/rofi/powermenu.lua";
   
   me-accept-entry: "MousePrimary";
   me-select-entry: "";
@@ -9,6 +9,7 @@ configuration {
   
   drun-display-format: " {name} ";
   run-shell-command: "wezterm start {cmd}";
+  ssh-command: "wezterm ssh {host}";
   sidebar-mode: true;
   matching: "fuzzy";
   scroll-method: 0;
@@ -16,12 +17,13 @@ configuration {
 
   display-drun: "異 Apps";
   display-run: " Run";
+  display-ssh: " SSH";
   display-filebrowser: " Files";
   display-powermenu: " Power";
 
   combi-modi: "drun,run";
   sort: true;
-  sorting-method: "normal";
+  sorting-method: "fzf";
 
   timeout {
     action: "kb-cancel";
