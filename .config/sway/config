@@ -37,8 +37,8 @@ default_floating_border pixel 2
 # Aesthetic layout
 #
 output * bg ~/.config/wallpaper.png fill
-gaps inner 8
-
+smart_borders on
+gaps inner 6
 
 input type:touchpad {
   tap enabled
@@ -177,7 +177,7 @@ bindsym {
 #
 set {
   $screenshot "Screenshot: [s]creen [w]window [r]egion"
- 
+
   $screenshot-cmd ~/.config/sway/screenshot.sh
 }
 
