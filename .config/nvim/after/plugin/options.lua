@@ -1,38 +1,41 @@
-local opt = vim.opt
+local set = vim.opt
 
 -- Search
-opt.showmatch = true
-opt.ignorecase = true
-opt.smartcase = true
-opt.hlsearch = false
-opt.incsearch = true
+set.showmatch = true
+set.ignorecase = true
+set.smartcase = true
+set.hlsearch = false
+set.incsearch = true
 
 -- Status
-opt.laststatus = 2
+set.laststatus = 2
 
 -- Indentation
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true
-opt.autoindent = true
-opt.smartindent = true
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
+set.expandtab = true
+set.autoindent = true
+set.smartindent = true
+
+-- Disable filetype plugins
+-- LSP and treesitter are enough
 vim.cmd("filetype plugin indent off")
 
 -- Integration
-opt.mouse = 'nv'
-opt.clipboard = 'unnamedplus'
-opt.ttyfast = true
+set.mouse = 'nv'
+set.clipboard = 'unnamedplus'
+set.ttyfast = true
 
 -- Layout
-opt.number = true
-opt.relativenumber = true
-opt.cursorline = true
+set.number = true
+set.relativenumber = true
+set.cursorline = true
 
 -- Disable backup
-opt.backup = false
-opt.writebackup = false
+set.backup = false
+set.writebackup = false
 
 -- Split panes
-opt.splitright = true
-opt.splitbelow = true
+set.splitright = true
+set.splitbelow = true
