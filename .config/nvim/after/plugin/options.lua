@@ -17,9 +17,10 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
+vim.cmd("filetype plugin indent off")
 
 -- Integration
-opt.mouse = 'a'
+opt.mouse = 'nv'
 opt.clipboard = 'unnamedplus'
 opt.ttyfast = true
 
