@@ -21,6 +21,7 @@ vim.call('plug#begin', '~/.vim/plugged')
   Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
   
   -- Extra functionalities
+	Plug'windwp/nvim-autopairs'
   Plug'windwp/nvim-ts-autotag'
   Plug'nvim-lua/plenary.nvim'
   
@@ -32,3 +33,4 @@ vim.call'plug#end'
 require'plug.cmp'
 require'plug.lsp'
 require'plug.others'
+

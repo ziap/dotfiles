@@ -14,13 +14,9 @@ set.laststatus = 2
 set.tabstop = 2
 set.softtabstop = 2
 set.shiftwidth = 2
-set.expandtab = true
+set.expandtab = false
 set.autoindent = true
 set.smartindent = true
-
--- Disable filetype plugins
--- LSP and treesitter are enough
-vim.cmd("filetype plugin indent off")
 
 -- Integration
 set.mouse = 'nv'
