@@ -45,9 +45,8 @@ tmap('<c-j>', exit_term..':wincmd j<cr>', true)
 tmap('<c-k>', exit_term..':wincmd k<cr>', true)
 tmap('<c-l>', exit_term..':wincmd l<cr>', true)
 
--- Toggle terminal
-nmap('<a-t>', ':new<cr>:terminal<cr>:resize 15<cr>:startinsert<cr>')
-tmap('<a-t>', exit_term..':bwipeout!<cr>', true)
+-- Create terminal window
+nmap('<leader>t', ':new<cr>:terminal<cr>:resize 15<cr>:startinsert<cr>')
 
 -- Create split panes
 nmap('<leader><leader>', ':vertical new<cr>', true)
