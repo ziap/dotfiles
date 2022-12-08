@@ -52,6 +52,11 @@ input type:touchpad {
 #
 exec_always ~/.config/sway/autotiling.py
 
+#
+# Load Xresources
+#
+exec_always xrdb -load ~/.Xresources
+
 ### Key bindings
 #
 # Basics:
