@@ -1,3 +1,5 @@
+local autocmd = vim.api.nvim_create_autocmd
+
 -- For ease of adding servers
 local servers = {
   'pyright',
@@ -17,10 +19,10 @@ for i, name in ipairs(servers) do
     -- Formatting on save
     on_attach = function(client, bufnr)
       if client.server_capabilities.documentFormattingProvider then
-        vim.api.nvim_command [[augroup Format]]
-        vim.api.nvim_command [[autocmd! * <buffer>]]
-        vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-        vim.api.nvim_command [[augroup END]]
+        autocmd({ "BufWritePre" }, {
+          pattern = { "<buffer>" },
+          callback = vim.lsp.buf.formatting_seq_sync
+        })
       end
     end
   }
