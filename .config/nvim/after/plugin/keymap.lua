@@ -76,3 +76,13 @@ vmap('<a-k>', ':move \'<-2<cr>gv', true)
 nmap('s', ':s//g<left><left>') -- Line
 nmap('S', ':%s//g<left><left>') -- All
 vmap('s', ':s//g<left><left>') -- Selection
+
+-- Toggle light and dark theme
+vim.api.nvim_create_user_command('Recolor', function()
+  if vim.opt.background:get() == 'dark' then
+    vim.opt.background = 'light'
+  else
+    vim.opt.background = 'dark'
+  end
+end, { nargs = 0 })
+nmap('<c-r>', ':Recolor<cr>', true)
