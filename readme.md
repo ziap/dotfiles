@@ -58,11 +58,11 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf install @multimedia
 
 sudo dnf install ImageMagick bat cargo clang-tools-extra exa fcitx5-configtool \
-  fcitx5-gtk fcitx5-qt fcitx5-unikey fd-find gcc gcc-c++ git grim light luajit \
-  mpv neovim nodejs npm pandoc papirus-icon-theme playerctl pulseaudio-utils \
-  python3 python3-pip ripgrep rofi rust rust-analyzer skim slurp sqlite \
-  starship sway sxiv texlive util-linux-user waybar wl-clipboard zathura \
-  zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
+  fcitx5-gtk fcitx5-qt fcitx5-unikey fd-find gcc gcc-c++ git git-delta grim \
+  light luajit mpv neovim nodejs npm pandoc papirus-icon-theme playerctl \
+  pulseaudio-utils python3 python3-pip ripgrep rofi rust rust-analyzer skim \
+  slurp sqlite starship sway sxiv texlive util-linux-user waybar wl-clipboard \
+  zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
 
 sudo npm i -g pyright vscode-langservers-extracted typescript \
   typescript-language-server emmet-ls
@@ -164,7 +164,7 @@ sudo dnf install sway rofi waybar luajit slurp grim light playerctl pulseaudio-u
 The packages for each programming languages are pretty self-explanatory
 
 ```bash
-sudo dnf install neovim git python3 python3-pip nodejs npm gcc gcc-c++ clang-tools-extra
+sudo dnf install neovim git git-delta python3 python3-pip nodejs npm gcc gcc-c++ clang-tools-extra
 ```
 
 Install language servers

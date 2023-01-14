@@ -1,11 +1,20 @@
 [user]
-	name = Zap
-	email = 67962871+ziap@users.noreply.github.com
+  name = Zap
+  email = 67962871+ziap@users.noreply.github.com
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [merge]
-	tool = nvimdiff3
+  tool = nvimdiff3
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  line-numbers = true
+  syntax-theme = gruvbox-dark
+  side-by-side = false
+  file-modified-label = modified:
