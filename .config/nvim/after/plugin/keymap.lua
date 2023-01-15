@@ -21,8 +21,9 @@ vim.g.mapleader = ' '
 nmap('<leader>r', ':Lspsaga rename<cr>', true)
 nmap('<leader>c', ':Lspsaga code_action<cr>', true)
 nmap('<leader>d', ':Lspsaga lsp_finder<cr>', true)
+nmap('<leader>n', ':Lspsaga diagnostic_jump_next<cr>', true)
+nmap('<leader>N', ':Lspsaga diagnostic_jump_prev<cr>', true)
 nmap('K', ':Lspsaga hover_doc<cr>', true)
-nmap('J', ':Lspsaga diagnostic_jump_next<cr>', true)
 
 -- Telescope keybinds
 nmap('<leader>f', ':Telescope find_files<cr>')

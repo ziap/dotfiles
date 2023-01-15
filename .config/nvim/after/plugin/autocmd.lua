@@ -9,6 +9,15 @@ autocmd(
   }
 )
 
+-- Use correct filetype for glsl
+autocmd(
+  { 'BufRead', 'BufNewFile' },
+  {
+    pattern = { '*.frag', '*.vert' },
+    command = 'set filetype=glsl' 
+  }
+)
+
 -- Highlight terminal output
 -- NOTE: don't enable yaml treesitter for this to work
 autocmd(
