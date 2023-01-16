@@ -23,8 +23,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 ### Features
 
 - ✨ Minimal and aesthetic gruvbox themed desktop
-- 🍱 Window management with autotiling
-- 🗨️  Lightweight yet powerful ZSH shell with starship prompt
+- 🗨️ Lightweight and powerful ZSH shell with starship prompt
 - 🚀 Functional developer environment for
     + C and C++
     + Rust
