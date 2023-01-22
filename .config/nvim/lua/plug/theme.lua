@@ -60,3 +60,28 @@ require'lualine'.setup {
     lualine_z = {}
   }
 }
+
+require'lspsaga'.setup{
+  symbol_in_winbar = {
+    enable = false,
+  },
+  ui = {
+    theme = 'round',
+    border = 'rounded',
+    winblend = 0,
+    colors = {
+      normal_bg = '#282828',
+      title_bg = '#282828',
+      red = '#cc241d',
+      magenta = '#d3869b',
+      orange = '#d65d0e',
+      yellow = '#d79921',
+      green = '#98971a',
+      cyan = '#689d6a',
+      blue = '#458588',
+      purple = '#b16286',
+      white = '#fbf1c7',
+      black = '#928374',
+    },
+  },
+}
