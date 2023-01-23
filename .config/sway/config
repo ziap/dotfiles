@@ -47,6 +47,10 @@ input type:touchpad {
   dwt disabled
 }
 
+input type:keyboard {
+    xkb_options ctrl:nocaps
+}
+
 #
 # Load Xresources
 #
