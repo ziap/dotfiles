@@ -55,7 +55,7 @@ nmap('<leader>t', ':new<cr>:terminal<cr>:resize 15<cr>:startinsert<cr>')
 -- Create split panes
 nmap('<leader>v', ':vertical new<cr>', true)
 nmap('<leader>x', ':new<cr>', true)
-nmap('<leader>o', ':windcmd o<cr>', true)
+nmap('<leader>o', ':wincmd o<cr>', true)
 
 -- Keybinds with shift
 nmap('Y', 'y$') -- Yank to the end
