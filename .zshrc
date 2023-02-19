@@ -73,9 +73,10 @@ alias icat='wezterm imgcat'
 ## Fuzzy finder utilities
 alias frm='rm -rf $(exa | sk -m)'
 alias fcd='cd $(fd --type=d | sk --preview "exa {} --icons -la")'
-alias fgd='cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview "exa {} --icons -lT")'
+alias fgd='cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview "exa {} --git-ignore --icons -lT")'
 alias fca='bat $(fd --type=file | sk --preview="bat {} --theme=gruvbox-dark --color=always") --theme=gruvbox-dark --color=always'
 alias fxo='xdg-open $(fd --type=file | sk --preview "file {}")'
+alias frg='sk --ansi -ic "rg --color=always --line-number {}"'
 
 ## Quickly start a dev server
 alias sv='python -m http.server 3000'
