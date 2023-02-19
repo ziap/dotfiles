@@ -39,8 +39,8 @@ return {
   },
   hide_tab_bar_if_only_one_tab = true,
   enable_wayland = true,
-  initial_cols = 102,
-  initial_rows = 34,
+  initial_cols = 100,
+  initial_rows = 40,
   
   -- Fonts
   font = load_font(font_normal),
