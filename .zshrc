@@ -60,7 +60,7 @@ bindkey -M menuselect 'l' vi-forward-char
 
 ## Same command but with extra features
 alias ls='exa --git --icons'
-alias cat='bat --theme=gruvbox-dark'
+alias cat='bat --theme=gruvbox-dark --color=always'
 
 ## Shorthands
 alias nv='nvim'
@@ -71,10 +71,11 @@ alias duh='du -h'
 alias icat='wezterm imgcat'
 
 ## Fuzzy finder utilities
-alias sk='sk --reverse'
 alias frm='rm -rf $(exa | sk -m)'
-alias fcd='cd $(fd --type=d | sk)'
-alias fgd='cd $(dirname $(fd -H -g \*.git ~/*/) | sk)'
+alias fcd='cd $(fd --type=d | sk --preview "exa {} --icons -la")'
+alias fgd='cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview "exa {} --icons -lT")'
+alias fca='bat $(fd --type=file | sk --preview="bat {} --theme=gruvbox-dark --color=always") --theme=gruvbox-dark --color=always'
+alias fxo='xdg-open $(fd --type=file | sk --preview "file {}")'
 
 ## Quickly start a dev server
 alias sv='python -m http.server 3000'

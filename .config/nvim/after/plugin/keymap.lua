@@ -32,6 +32,9 @@ nmap('<leader>b', ':Telescope buffers<cr>')
 nmap('<leader>h', ':Telescope help_tags<cr>')
 nmap('<leader>e', ':Telescope file_browser<cr>')
 
+-- Compile with make
+nmap('<leader>m', ':make<cr>:cw<cr><cr>')
+
 -- Move around split windows with less keystrokes
 nmap('<c-h>', ':wincmd h<cr>', true)
 nmap('<c-j>', ':wincmd j<cr>', true)
