@@ -14,13 +14,18 @@ set {
 
   $resize_factor 40px
 
-  $term wezterm
   $menu rofi -show drun | swaymsg
   $file rofi -show filebrowser | swaymsg
   $power rofi -show powermenu | swaymsg
   $browser firefox
   $private-browser firefox --private-window
 }
+
+#
+# Terminal:
+#
+exec_always foot --server
+set $term footclient
 
 default_border pixel 2
 default_floating_border pixel 2

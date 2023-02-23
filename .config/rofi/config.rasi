@@ -8,8 +8,8 @@ configuration {
   application-fallback-icon: "run-build";
   
   drun-display-format: " {name} ";
-  run-shell-command: "wezterm start {cmd}";
-  ssh-command: "wezterm ssh {host}";
+  run-shell-command: "foot {cmd}";
+  ssh-command: "foot --term=xterm ssh {host}";
   sidebar-mode: true;
   matching: "fuzzy";
   scroll-method: 0;

@@ -36,11 +36,11 @@ require'lualine'.setup {
     theme = 'gruvbox',
     component_separators = {
       left = '\u{E0B9}',
-      right = '\u{E0BB}'
+      right = '\u{E0B7}'
     },
     section_separators = {
       left = '\u{E0B8}',
-      right = '\u{E0BA}'
+      right = '\u{E0B6}'
     },
   },
   sections = {

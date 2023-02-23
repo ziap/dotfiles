@@ -14,7 +14,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 - WM: [sway](https://swaywm.org/)
 - Shell: [zsh](https://www.zsh.org/)
 - Editor: [neovim](https://neovim.io/)
-- Terminal: [wezterm](https://wezfurlong.org/wezterm/)
+- Terminal: [foot](https://codeberg.org/dnkl/foot/)
 - Browser: [firefox](https://www.mozilla.org/en-US/firefox/)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
@@ -57,8 +57,8 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf install @multimedia
 
 sudo dnf install ImageMagick bat cargo clang-tools-extra exa fcitx5-configtool \
-  fcitx5-gtk fcitx5-qt fcitx5-unikey fd-find gcc gcc-c++ git git-delta grim \
-  light luajit mpv neovim nodejs npm pandoc papirus-icon-theme playerctl \
+  fcitx5-gtk fcitx5-qt fcitx5-unikey fd-find foot gcc gcc-c++ git git-delta \
+  grim light luajit mpv neovim nodejs npm pandoc papirus-icon-theme playerctl \
   pulseaudio-utils python3 python3-pip ripgrep rofi rust rust-analyzer skim \
   slurp sqlite starship sway sxiv texlive util-linux-user waybar wl-clipboard \
   zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
@@ -112,16 +112,10 @@ cp -rp .local ~
 
 ![](img/terminal.png)
 
-Install wezterm by going to [the release page](https://github.com/wez/wezterm/releases/latest) and grab the lastest fedora rpm file.
+Install and setup foot, zsh, some plugins and starship prompt
 
 ```bash
-sudo dnf install https://github.com/wez/wezterm/releases/download/---.fedora36.x86_64.rpm
-```
-
-Install and setup zsh, some plugins and starship prompt
-
-```bash
-sudo dnf install util-linux-user zsh zsh-autosuggestions zsh-syntax-highlighting starship
+sudo dnf install foot util-linux-user zsh zsh-autosuggestions zsh-syntax-highlighting starship
 
 chsh -s $(which zsh)
 cp .zshrc ~ 
