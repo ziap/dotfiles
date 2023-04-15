@@ -4,8 +4,18 @@ local set = vim.opt
 set.showmatch = true
 set.ignorecase = true
 set.smartcase = true
-set.hlsearch = false
+set.hlsearch = true
 set.incsearch = true
+
+-- Clear hlsearch when move
+vim.on_key(function(char)
+  if vim.fn.mode() == "n" then
+    local hlsearch = string.match("nN*#?/", char) ~= nil
+    if vim.opt.hlsearch ~= hlsearch then
+      vim.opt.hlsearch = hlsearch
+    end
+  end
+end, nil)
 
 -- Status
 set.laststatus = 2

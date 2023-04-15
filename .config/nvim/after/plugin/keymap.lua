@@ -5,7 +5,7 @@ local function bind(mode)
       noremap = true,
       silent = silent or false
     }
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    vim.keymap.set(mode, lhs, rhs, options)
   end
 end
 
@@ -17,49 +17,41 @@ local tmap = bind('t') -- tnoremap
 -- Set leader key
 vim.g.mapleader = ' '
 
--- Lspsaga keybinds
-nmap('<leader>r', ':Lspsaga rename<cr>', true)
-nmap('<leader>c', ':Lspsaga code_action<cr>', true)
-nmap('<leader>d', ':Lspsaga lsp_finder<cr>', true)
-nmap('<leader>n', ':Lspsaga diagnostic_jump_next<cr>', true)
-nmap('<leader>N', ':Lspsaga diagnostic_jump_prev<cr>', true)
-nmap('K', ':Lspsaga hover_doc<cr>', true)
+nmap('<leader>n', vim.diagnostic.goto_next, true)
+nmap('<leader>N', vim.diagnostic.goto_prev, true)
 
 -- Telescope keybinds
-nmap('<leader>f', ':Telescope find_files<cr>')
-nmap('<leader>g', ':Telescope live_grep<cr>')
-nmap('<leader>b', ':Telescope buffers<cr>')
-nmap('<leader>h', ':Telescope help_tags<cr>')
-nmap('<leader>e', ':Telescope file_browser<cr>')
-
--- Compile with make
-nmap('<leader>m', ':make<cr>:cw<cr><cr>')
+nmap('<leader>f', '<cmd>Telescope find_files<cr>')
+nmap('<leader>g', '<cmd>Telescope live_grep<cr>')
+nmap('<leader>b', '<cmd>Telescope buffers<cr>')
+nmap('<leader>h', '<cmd>Telescope help_tags<cr>')
+nmap('<leader>e', '<cmd>Telescope file_browser<cr>')
 
 -- Move around split windows with less keystrokes
-nmap('<c-h>', ':wincmd h<cr>', true)
-nmap('<c-j>', ':wincmd j<cr>', true)
-nmap('<c-k>', ':wincmd k<cr>', true)
-nmap('<c-l>', ':wincmd l<cr>', true)
+nmap('<c-h>', '<cmd>wincmd h<cr>', true)
+nmap('<c-j>', '<cmd>wincmd j<cr>', true)
+nmap('<c-k>', '<cmd>wincmd k<cr>', true)
+nmap('<c-l>', '<cmd>wincmd l<cr>', true)
 
 -- Make working with terminal windows easier
 local exit_term = '<c-\\><c-n>'
 tmap('<esc>', exit_term, true)
-tmap('<c-h>', exit_term..':wincmd h<cr>', true)
-tmap('<c-j>', exit_term..':wincmd j<cr>', true)
-tmap('<c-k>', exit_term..':wincmd k<cr>', true)
-tmap('<c-l>', exit_term..':wincmd l<cr>', true)
+tmap('<c-h>', exit_term..'<cmd>wincmd h<cr>', true)
+tmap('<c-j>', exit_term..'<cmd>wincmd j<cr>', true)
+tmap('<c-k>', exit_term..'<cmd>wincmd k<cr>', true)
+tmap('<c-l>', exit_term..'<cmd>wincmd l<cr>', true)
 
 -- Create terminal window
-nmap('<leader>t', ':new<cr>:terminal<cr>:resize 15<cr>:startinsert<cr>')
+nmap('<leader>t', '<cmd>new<cr><cmd>terminal<cr><cmd>resize 15<cr><cmd>startinsert<cr>')
 
 -- Create split panes
-nmap('<leader>v', ':vertical new<cr>', true)
-nmap('<leader>x', ':new<cr>', true)
-nmap('<leader>o', ':wincmd o<cr>', true)
+nmap('<leader>v', '<cmd>vertical new<cr>', true)
+nmap('<leader>x', '<cmd>new<cr>', true)
+nmap('<leader>o', '<cmd>wincmd o<cr>', true)
 
 -- Keybinds with shift
 nmap('Y', 'y$') -- Yank to the end
-nmap('U', ':redo<cr>') -- Redo
+nmap('U', '<cmd>redo<cr>') -- Redo
 vmap('J', 'j')
 vmap('K', 'k')
 
@@ -68,26 +60,29 @@ nmap('<c-n>', '<c-d>zz')
 nmap('<c-p>', '<c-u>zz')
 
 -- Move line up and down
-nmap('<a-j>', ':move +1<cr>', true)
-nmap('<a-k>', ':move -2<cr>', true)
-imap('<a-j>', '<esc>:move +1<cr>a', true)
-imap('<a-k>', '<esc>:move -2<cr>a', true)
+nmap('<a-j>', '<cmd>move +1<cr>', true)
+nmap('<a-k>', '<cmd>move -2<cr>', true)
+imap('<a-j>', '<esc><cmd>move +1<cr>a', true)
+imap('<a-k>', '<esc><cmd>move -2<cr>a', true)
 
 -- Move selection up and down
-vmap('<a-j>', ':move \'>+1<cr>gv', true)
-vmap('<a-k>', ':move \'<-2<cr>gv', true)
+vmap('<a-j>', '<cmd>move \'>+1<cr>gv', true)
+vmap('<a-k>', '<cmd>move \'<-2<cr>gv', true)
 
 -- Replace text
-nmap('s', ':s//g<left><left>') -- Line
-nmap('S', ':%s//g<left><left>') -- All
-vmap('s', ':s//g<left><left>') -- Selection
+nmap('s', '<cmd>s//g<left><left>') -- Line
+nmap('S', '<cmd>%s//g<left><left>') -- All
+vmap('s', '<cmd>s//g<left><left>') -- Selection
+
+-- Prevent Ctrl-C from canceling block insertion
+imap('<c-c>', '<esc>')
 
 -- Toggle light and dark theme
-vim.api.nvim_create_user_command('Recolor', function()
+nmap('<c-r>', function()
   if vim.opt.background:get() == 'dark' then
     vim.opt.background = 'light'
   else
     vim.opt.background = 'dark'
   end
-end, { nargs = 0 })
-nmap('<c-r>', ':Recolor<cr>', true)
+end, true)
+

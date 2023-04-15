@@ -16,7 +16,6 @@ for i, name in ipairs(servers) do
     -- Enable completion
     capabilities = require'cmp_nvim_lsp'.default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     
-    -- Formatting on save
     on_attach = function(client, bufnr)
       if client.server_capabilities.documentFormattingProvider then
         autocmd({ "BufWritePre" }, {
@@ -24,6 +23,11 @@ for i, name in ipairs(servers) do
           callback = vim.lsp.buf.formatting_seq_sync
         })
       end
+
+      local opts = { buffer = bufnr }
+      vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, opts)
+      vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
+      vim.keymap.set({ 'n', 'v' }, '<leader>c', vim.lsp.buf.code_action, opts)
     end
   }
 end

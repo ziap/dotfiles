@@ -8,7 +8,6 @@ vim.call('plug#begin', '~/.vim/plugged')
   
   -- LSP
   Plug 'neovim/nvim-lspconfig'
-  Plug 'glepnir/lspsaga.nvim'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
@@ -27,7 +26,6 @@ vim.call('plug#begin', '~/.vim/plugged')
   
   -- Telescope
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-file-browser.nvim'
 vim.call'plug#end'
 
 require'plug.theme'
