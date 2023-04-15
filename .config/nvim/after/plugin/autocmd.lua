@@ -12,12 +12,14 @@ autocmd({ 'BufRead', 'BufNewFile' }, {
   command = 'set filetype=glsl' 
 })
 
+-- Turn on quickfix menu automatically
 autocmd('QuickFixCmdPost', {
   pattern = '[^l]*',
   nested = true,
   command = 'cwindow'
 })
 
+-- Same as above but for location list
 autocmd('QuickFixCmdPost', {
   pattern = 'l*',
   nested = true,
