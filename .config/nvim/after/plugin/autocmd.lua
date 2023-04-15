@@ -12,6 +12,18 @@ autocmd({ 'BufRead', 'BufNewFile' }, {
   command = 'set filetype=glsl' 
 })
 
+autocmd('QuickFixCmdPost', {
+  pattern = '[^l]*',
+  nested = true,
+  command = 'cwindow'
+})
+
+autocmd('QuickFixCmdPost', {
+  pattern = 'l*',
+  nested = true,
+  command = 'lwindow'
+})
+
 -- Highlight yank
 autocmd('TextYankPost', {
   callback = function()
@@ -19,5 +31,5 @@ autocmd('TextYankPost', {
       higroup = 'Visual',
       timeout = 100,
     })
-  end,
+  end
 })
