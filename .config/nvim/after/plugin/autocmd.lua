@@ -12,12 +12,7 @@ autocmd({ 'BufRead', 'BufNewFile' }, {
   command = 'set filetype=glsl' 
 })
 
--- Highlight terminal output
--- NOTE: don't enable yaml treesitter for this to work
-autocmd('TermOpen', {
-  command = 'set filetype=yaml'
-})
-
+-- Highlight yank
 autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank({

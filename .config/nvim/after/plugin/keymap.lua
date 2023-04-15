@@ -25,7 +25,6 @@ nmap('<leader>f', '<cmd>Telescope find_files<cr>')
 nmap('<leader>g', '<cmd>Telescope live_grep<cr>')
 nmap('<leader>b', '<cmd>Telescope buffers<cr>')
 nmap('<leader>h', '<cmd>Telescope help_tags<cr>')
-nmap('<leader>e', '<cmd>Telescope file_browser<cr>')
 
 -- Move around split windows with less keystrokes
 nmap('<c-h>', '<cmd>wincmd h<cr>', true)
@@ -42,7 +41,12 @@ tmap('<c-k>', exit_term..'<cmd>wincmd k<cr>', true)
 tmap('<c-l>', exit_term..'<cmd>wincmd l<cr>', true)
 
 -- Create terminal window
-nmap('<leader>t', '<cmd>new<cr><cmd>terminal<cr><cmd>resize 15<cr><cmd>startinsert<cr>')
+nmap('<leader>t', function()
+  vim.api.nvim_command('new | terminal')
+  vim.opt.number = false
+  vim.opt.relativenumber = false
+  vim.api.nvim_command('resize 15 | startinsert')
+end)
 
 -- Create split panes
 nmap('<leader>v', '<cmd>vertical new<cr>', true)

@@ -20,8 +20,8 @@ local function location()
 end
 
 local function md_wordcount()
-  local wc = vim.fn.wordcount()
   if vim.bo.filetype == "markdown" then
+    local wc = vim.fn.wordcount()
     local words = "/"..tostring(wc.words).." words"
     if wc.visual_words ~= nil then
       return tostring(wc.visual_words)..words
