@@ -3,7 +3,7 @@
   "modules-right": ["pulseaudio", "backlight", "network", "battery", "clock"],
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%b %d(%H:%M) }"
+    "format": "{:%b %d(%H:%M) 󰃰}"
   },
   "backlight": {
     "format": "{percent}% {icon}",
@@ -17,7 +17,7 @@
       "critical": 15
     },
     "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% 󰢝",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""]
@@ -25,14 +25,14 @@
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+    "format-muted": "󰝟 {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "hands-free": "󱠰",
+      "headset": "󰋎",
       "phone": "",
       "portable": "",
       "car": "",
@@ -43,9 +43,9 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": "Connected ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-disconnected": "Disconnected 睊", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+    "format-disconnected": "Disconnected 󱛅", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰛳",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",

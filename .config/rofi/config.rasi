@@ -15,10 +15,10 @@ configuration {
   scroll-method: 0;
   disable-history: false;
 
-  display-drun: "異 Apps";
+  display-drun: "󱓞 Apps";
   display-run: " Run";
-  display-ssh: " SSH";
-  display-filebrowser: " Files";
+  display-ssh: "󰀂 SSH";
+  display-filebrowser: " Files";
   display-powermenu: " Power";
 
   combi-modi: "drun,run";
