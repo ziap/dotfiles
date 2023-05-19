@@ -47,32 +47,10 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 ## Installation
 
-<details><summary>If you know what you're doing, skip the part below and simply run this</summary>
+<details><summary>If you know what you're doing, skip the part below and simply run the script</summary>
 
 ```bash
-git clone --depth=1 https://github.com/ziap/dotfiles
-cd dotfiles
-
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install @multimedia
-
-sudo dnf install ImageMagick bat cargo clang-tools-extra exa fcitx5-configtool \
-  fcitx5-gtk fcitx5-qt fcitx5-unikey fd-find foot gcc gcc-c++ git git-delta \
-  grim light luajit mpv neovim nodejs npm pandoc papirus-icon-theme playerctl \
-  pulseaudio-utils python3 python3-pip ripgrep rofi rust rust-analyzer skim \
-  slurp sqlite starship sway sxiv texlive util-linux-user waybar wl-clipboard \
-  zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-syntax-highlighting
-
-sudo npm i -g pyright vscode-langservers-extracted typescript \
-  typescript-language-server emmet-ls
-
-cp -rp .local .config .zshrc .Xresources ~
-chsh -s $(which zsh)
-
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-nvim -c PlugInstall
+curl -fsS https://raw.githubusercontent.com/ziap/dotfiles/master/install_fedora.sh | sh
 ```
 
 </details>
@@ -96,16 +74,15 @@ sudo dnf install @multimedia
 
 ### Fonts
 
-Install fonts to local font directory `~/.local/share/fonts`
-
 Fonts being used are:
   - FiraCode (terminal, editor font)
   - VictorMono (italic font)
   - RobotoMono (UI font)
 
+Run this script to download all fonts to the local font folder `~/.local/share/fonts`
+
 ```bash
-# Install fonts
-cp -rp .local ~
+./download_fonts.sh
 ```
 
 ### Terminal + Shell setup
