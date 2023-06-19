@@ -19,6 +19,12 @@ vim.g.mapleader = ' '
 
 nmap('<leader>n', vim.diagnostic.goto_next, true)
 nmap('<leader>N', vim.diagnostic.goto_prev, true)
+nmap('<leader>k', vim.lsp.buf.hover)
+nmap('<leader>r', vim.lsp.buf.rename)
+nmap('<leader>c', vim.lsp.buf.code_action)
+
+nmap('gd', vim.lsp.buf.definition)
+nmap('gi', vim.lsp.buf.implementation)
 
 -- Telescope keybinds
 nmap('<leader>f', ':Telescope find_files<cr>')
