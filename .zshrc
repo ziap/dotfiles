@@ -2,6 +2,8 @@
 # | ZSH Configuration file |
 # +------------------------+
 
+EDITOR="/usr/bin/nvim"
+
 # ---- HISTORY ----------------------------------
 HISTFILE=~/.histfile
 HISTSIZE=10000
