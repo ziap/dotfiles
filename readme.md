@@ -23,7 +23,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 ### Features
 
 - ✨ Minimal and aesthetic gruvbox themed desktop
-- 🗨️ Lightweight and powerful ZSH shell with starship prompt
+- 🗨️ Lightweight and powerful ZSH shell with custom prompt
 - 🚀 Functional developer environment for
     + C and C++
     + Rust
@@ -89,10 +89,10 @@ Run this script to download all fonts to the local font folder `~/.local/share/f
 
 ![](img/terminal.png)
 
-Install and setup foot, zsh, some plugins and starship prompt
+Install and setup foot, zsh and some plugins
 
 ```bash
-sudo dnf install foot util-linux-user zsh zsh-autosuggestions zsh-syntax-highlighting starship
+sudo dnf install foot util-linux-user zsh zsh-autosuggestions zsh-syntax-highlighting
 
 chsh -s $(which zsh)
 cp .zshrc ~ 
@@ -134,7 +134,7 @@ sudo dnf install sway rofi waybar luajit slurp grim light playerctl pulseaudio-u
 The packages for each programming languages are pretty self-explanatory
 
 ```bash
-sudo dnf install neovim git git-delta python3 python3-pip nodejs npm gcc gcc-c++ clang-tools-extra
+sudo dnf install neovim gh git git-delta python3 python3-pip nodejs npm gcc gcc-c++ clang-tools-extra
 ```
 
 Install language servers

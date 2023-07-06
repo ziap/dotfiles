@@ -23,7 +23,7 @@ bindkey -v
 KEYTIMEOUT=5
 
 ## Change cursor shape for different vi modes.
-function zle-keymap-select {
+zle-keymap-select() {
     case $KEYMAP in
         vicmd) echo -ne '\e[1 q';;      # block
         viins|main) echo -ne '\e[5 q';; # beam
@@ -31,14 +31,14 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
-function zle-line-init {
+zle-line-init() {
     zle -K viins
     echo -ne '\e[5 q'
 }
 zle -N zle-line-init
 
 echo -ne '\e[5 q'
-function preexec { echo -ne '\e[5 q' }
+preexec() { echo -ne '\e[5 q' }
 
 # ---- KEYBINDS ---------------------------------
 
@@ -82,7 +82,7 @@ function mdc {
 }
 
 ## Just mkdir followed by cd
-function mkcd { mkdir "$1" && cd "$1" }
+mkcd() { mkdir "$1" && cd "$1" }
 
 # ---- ALIASES ----------------------------------
 
@@ -92,10 +92,21 @@ alias la='ls -a'
 alias lla='ls -la'
 alias duh='du -h'
 
-# ---- PLUGINS ----------------------------------
+# ---- PROMPT -----------------------------------
+autoload -Uz vcs_info
 
-## Starship phrompt
-eval "$(starship init zsh)"
+function precmd { vcs_info }
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' formats '  %b'
+zstyle ':vcs_info:*' actionformats '  %b (%a)'
+
+setopt prompt_subst
+
+PROMPT='%K{magenta} %n %F{magenta}%K{yellow}%k%F{yellow}%f '
+RPROMPT='%(?..%F{red}󰀦 %?%f )%F{blue}%~%f%F{magenta}${vcs_info_msg_0_}%f'
+
+# ---- PLUGINS ----------------------------------
 
 ## Syntax highlighting and suggestion
 . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
