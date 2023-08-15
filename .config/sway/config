@@ -45,15 +45,21 @@ output * bg ~/.config/wallpaper.png fill
 smart_borders on
 gaps inner 6
 
-input type:touchpad {
-  tap enabled
-  natural_scroll enabled
-  middle_emulation enabled
-  dwt disabled
-}
+input {
+  type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+    dwt disabled
+  }
 
-input type:keyboard {
+  type:keyboard {
     xkb_options ctrl:nocaps
+  }
+
+  type:touch {
+    events disabled
+  }
 }
 
 #
