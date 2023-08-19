@@ -193,14 +193,6 @@ sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool
 sudo dnf install fcitx5-unikey # Or your IME
 ```
 
-Write these to `/etc/environment`
-
-```bash
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-```
-
 You can automatically start fcitx by adding `exec_always fcitx5` to sway config but I prefer manually starting it in rofi.
 
 # License

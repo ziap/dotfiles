@@ -2,7 +2,12 @@
 # | ZSH Configuration file |
 # +------------------------+
 
-EDITOR="/usr/bin/nvim"
+# ---- EXPORTS ----------------------------------
+
+export EDITOR=/usr/bin/nvim
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 # ---- HISTORY ----------------------------------
 HISTFILE=~/.histfile
@@ -65,12 +70,12 @@ function ls { exa --git --icons $@ }
 function cat { bat --theme=gruvbox-dark --color=always $@ }
 
 ## Fuzzy finder utilities
-function frm { rm -rf $(exa | sk -m) }
-function fcd { cd $(fd --type=d | sk --preview "/usr/bin/env exa {} --icons -la") }
-function fgd { cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview "/usr/bin/env exa {} --git-ignore --icons -T") }
-function fca { cat $(fd --type=file | sk --preview="/usr/bin/env bat {} --theme=gruvbox-dark --color=always") }
-function fxo { xdg-open $(fd --type=file | sk --preview "/usr/bin/env file {}") }
-function frg { sk --ansi -ic "/usr/bin/env rg {} --color=always --line-number" }
+function frm { fd --type=file | sk -m --preview 'file {}' | xargs -d '\n' rm }
+function fcd { cd "$(fd --type=d | sk --preview 'exa {} --icons -la')" }
+function fgd { cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview 'exa {} --git-ignore --icons -T') }
+function fca { bat "$(fd --type=file | sk --preview='bat {} --theme=gruvbox-dark --color=always')" }
+function fxo { xdg-open "$(fd --type=file | sk --preview 'file {}')" }
+function frg { sk --ansi -ic "rg {} --color=always --line-number" }
 
 ## Quickly start a dev server
 function sv { python -m http.server 3000 $@ }
