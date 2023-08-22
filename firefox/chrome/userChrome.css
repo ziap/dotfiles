@@ -22,36 +22,29 @@
 /* Feel free to tweak the following
  * config settings to your own liking. */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --window-colour: #282828;
+    --secondary-colour: #1d2821;
+    --inverted-colour: #ebdbb2;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --window-colour:               #fbf1c7;
+    --secondary-colour:            #f9f5d7;
+    --inverted-colour:             #3c3836;
+  }
+}
+
 :root {
   /*---+---+---+---+---+---+---+
    | C | O | L | O | U | R | S |
    +---+---+---+---+---+---+---*/
 
-  /* Comment the color theme you don't want to use */
-
-  /* Dark Theme Colors */
-  --window-colour: #282828;
-  --secondary-colour: #1d2821;
-  --inverted-colour: #ebdbb2;
-
-  /* Light Theme Colors
-    --window-colour:               #FAFAFC;
-    --secondary-colour:            #EAEAEC;
-    --inverted-colour:             #1E2021;
-    */
-
-  /* Containter Tab Colours */
-  --uc-identity-color-blue: #83a598;
-  --uc-identity-color-turquoise: #8ec07c;
-  --uc-identity-color-green: #b8bb26;
-  --uc-identity-color-yellow: #fabd2f;
-  --uc-identity-color-orange: #fe8019;
-  --uc-identity-color-red: #fb4934;
-  --uc-identity-color-pink: #d3869b;
-  --uc-identity-color-purple: #b16286;
-
   /* URL colour in URL bar suggestions */
-  --urlbar-popup-url-color: var(--uc-identity-color-purple) !important;
+  --urlbar-popup-url-color: #b16286 !important;
 
   /*---+---+---+---+---+---+---+
    | V | I | S | U | A | L | S |
@@ -81,58 +74,17 @@
  | B | U | T | T | O | N | S |
  +---+---+---+---+---+---+---*/
 
-/* showing only the back button */
-#back-button {
-  display: -moz-inline-box !important;
-}
-#forward-button {
-  display: none !important;
-}
-#stop-button {
-  display: none !important;
-}
-#reload-button {
-  display: none !important;
-}
-
-/* bookmark icon */
-#star-button {
-  display: none !important;
-}
-
-/* zoom indicator */
-#urlbar-zoom-button {
-  display: none !important;
-}
-
-/* Show Hamburger Menu */
-#PanelUI-button {
-  display: -moz-inline-box !important;
-}
-
-#reader-mode-button {
-  display: none !important;
-}
-
-/* tracking protection shield icon */
-#tracking-protection-icon-container {
-  display: none !important;
-}
-
-/* #identity-box { display: none !important } /* hides encryption AND permission items */
-#identity-permission-box {
-  display: none !important;
-} /* only hides permission items */
-
-/* e.g. playing indicator (secondary - not icon) */
-.tab-secondary-label {
-  display: none !important;
-}
-
-#pageActionButton {
-  display: none !important;
-}
-#page-action-buttons {
+#forward-button,
+#stop-button,
+#reload-button,
+#star-button,
+#urlbar-zoom-button,
+#reader-mode-button,
+#tracking-protection-icon-container,
+#identity-permission-box,
+.tab-secondary-label,
+#page-action-buttons,
+.titlebar-buttonbox-container {
   display: none !important;
 }
 
@@ -407,40 +359,6 @@ window,
       calc(100vw - var(--uc-urlbar-width)) 0 0 !important;
   }
 } /* end media query */
-
-/* Container Tabs */
-.identity-color-blue {
-  --identity-tab-color: var(--uc-identity-color-blue) !important;
-  --identity-icon-color: var(--uc-identity-color-blue) !important;
-}
-.identity-color-turquoise {
-  --identity-tab-color: var(--uc-identity-color-turquoise) !important;
-  --identity-icon-color: var(--uc-identity-color-turquoise) !important;
-}
-.identity-color-green {
-  --identity-tab-color: var(--uc-identity-color-green) !important;
-  --identity-icon-color: var(--uc-identity-color-green) !important;
-}
-.identity-color-yellow {
-  --identity-tab-color: var(--uc-identity-color-yellow) !important;
-  --identity-icon-color: var(--uc-identity-color-yellow) !important;
-}
-.identity-color-orange {
-  --identity-tab-color: var(--uc-identity-color-orange) !important;
-  --identity-icon-color: var(--uc-identity-color-orange) !important;
-}
-.identity-color-red {
-  --identity-tab-color: var(--uc-identity-color-red) !important;
-  --identity-icon-color: var(--uc-identity-color-red) !important;
-}
-.identity-color-pink {
-  --identity-tab-color: var(--uc-identity-color-pink) !important;
-  --identity-icon-color: var(--uc-identity-color-pink) !important;
-}
-.identity-color-purple {
-  --identity-tab-color: var(--uc-identity-color-purple) !important;
-  --identity-icon-color: var(--uc-identity-color-purple) !important;
-}
 
 .tabbrowser-tab[label="New Tab"] .tab-icon-image {
   display:none!important;

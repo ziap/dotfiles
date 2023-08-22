@@ -1,7 +1,19 @@
-@-moz-document url-prefix(about:blank) {
-  body {background-color: #282828 !important;}
+@media (prefers-color-scheme: dark) {
+  @-moz-document url-prefix(about:blank) {
+      body {background-color: #282828 !important;}
+  }
+
+  @-moz-document url-prefix(about:newtab) {
+      body {background-color: #282828 !important;}
+  }
 }
 
-@-moz-document url-prefix(about:newtab) {
-  body {background-color: #282828 !important;}
+@media (prefers-color-scheme: light) {
+  @-moz-document url-prefix(about:blank) {
+      body {background-color: #fbf1c7 !important;}
+  }
+
+  @-moz-document url-prefix(about:newtab) {
+      body {background-color: #fbf1c7 !important;}
+  }
 }

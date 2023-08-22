@@ -66,9 +66,9 @@ user_pref("browser.places.speculativeConnect.enabled", false);
 // Disable IPv6
 user_pref("network.dns.disableIPv6", true);
 
-// Disable search suggestion
-user_pref("browser.search.suggest.enabled", false);
-user_pref("browser.urlbar.suggest.searches", false);
+// Disable some search suggestion
+user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false); // [FF95+]
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
