@@ -177,7 +177,7 @@ nvim -c PlugInstall
 
 ![](img/firefox.png)
 
-- Gruvbox cascade [userChrome.css](https://gist.github.com/ziap/be9576c3bcdcb7de6b47a2ba45aa3725)
+- `user.js` and custom theme in the `firefox` folder
 - [Dark reader](https://darkreader.org/) with gruvbox theme
 
 ### Document editing workflow setup

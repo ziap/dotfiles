@@ -1,0 +1,7 @@
+@-moz-document url-prefix(about:blank) {
+  body {background-color: #282828 !important;}
+}
+
+@-moz-document url-prefix(about:newtab) {
+  body {background-color: #282828 !important;}
+}
