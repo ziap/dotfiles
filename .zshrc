@@ -67,7 +67,7 @@ bindkey -M menuselect 'l' vi-forward-char
 
 ## Same command but with extra features
 function ls { exa --git --icons $@ }
-function cat { bat --theme=gruvbox-dark --color=always $@ }
+function cat { bat --theme=gruvbox-dark $@ }
 
 ## Fuzzy finder utilities
 function frm { fd --type=file | sk -m --preview 'file {}' | xargs -d '\n' rm }
