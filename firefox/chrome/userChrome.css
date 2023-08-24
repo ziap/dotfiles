@@ -1,365 +1,40 @@
-/*========================================================================================================*
-  +-----+-----+-----+-----+-----+-----+-----+
-  | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
-  | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
-  +-----+-----+-----+-----+-----+-----+-----+  Mouse Edition with gruvbox colorscheme.
-    Description:    Cascade, Mouse Edition, is a Firefox Style based on the Cascade theme by Andreas Grafen
-                    What you get is a really simple one-line layout using the new Proton UI.
-                    The original Cascade Theme by Andreas Grafen was based on SimpleFox :
-                    > SimpleFox: https://github.com/migueravila/SimpleFox
-    Authors:        Andreas Grafen (original cascade theme)
-                    (https://andreas.grafen.info)
-                    Clément Rambaud (minor tweaks on the original file)
-                    Zap (gruvbox colors)
-    Repository:     https://github.com/andreasgrafen/cascade
-                    https://github.com/crambaud/cascade
-*========================================================================================================*/
-
-/*---+---+---+---+---+---+
- | C | O | N | F | I | G |
- +---+---+---+---+---+---*/
-
-/* Feel free to tweak the following
- * config settings to your own liking. */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --window-colour: #282828;
-    --secondary-colour: #1d2821;
-    --inverted-colour: #ebdbb2;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --window-colour:               #fbf1c7;
-    --secondary-colour:            #f9f5d7;
-    --inverted-colour:             #3c3836;
-  }
-}
-
-:root {
-  /*---+---+---+---+---+---+---+
-   | C | O | L | O | U | R | S |
-   +---+---+---+---+---+---+---*/
-
-  /* URL colour in URL bar suggestions */
-  --urlbar-popup-url-color: #b16286 !important;
-
-  /*---+---+---+---+---+---+---+
-   | V | I | S | U | A | L | S |
-   +---+---+---+---+---+---+---*/
-
-  /* global border radius */
-  --uc-border-radius: 0;
-
-  /* dynamic url bar width settings */
-  --uc-urlbar-width: clamp(250px, 50vw, 600px);
-
-  /* dynamic tab width settings */
-  --uc-active-tab-width: clamp(50px, 18vw, 220px);
-  --uc-inactive-tab-width: clamp(50px, 15vw, 200px);
-
-  /* if active always shows the tab close button */
-  --show-tab-close-button: none; /* DEFAULT: -moz-inline-box; */
-
-  /* if active only shows the tab close button on hover*/
-  --show-tab-close-button-hover: -moz-inline-box; /* DEFAULT: -moz-inline-box; */
-
-  /* adds left and right margin to the container-tabs indicator */
-  --container-tabs-indicator-margin: 0px;
-}
-
-/*---+---+---+---+---+---+---+
- | B | U | T | T | O | N | S |
- +---+---+---+---+---+---+---*/
-
+/* Remove extra buttons and bookmark bar */
 #forward-button,
 #stop-button,
 #reload-button,
-#star-button,
-#urlbar-zoom-button,
-#reader-mode-button,
 #tracking-protection-icon-container,
 #identity-permission-box,
-.tab-secondary-label,
 #page-action-buttons,
-.titlebar-buttonbox-container {
+.titlebar-buttonbox-container,
+.titlebar-spacer,
+#PersonalToolbar {
   display: none !important;
 }
 
-/*=============================================================================================*/
-
-/*---+---+---+---+---+---+
- | L | A | Y | O | U | T |
- +---+---+---+---+---+---*/
-
-/* No need to change anything below this comment.
- * Just tweak it if you want to tweak the overall layout. c: */
-
-:root {
-  --uc-theme-colour: var(--window-colour);
-  --uc-hover-colour: var(--secondary-colour);
-  --uc-inverted-colour: var(--inverted-colour);
-
-  --button-bgcolor: var(--uc-theme-colour) !important;
-  --button-hover-bgcolor: var(--uc-hover-colour) !important;
-  --button-active-bgcolor: var(--uc-hover-colour) !important;
-
-  --toolbar-bgcolor: var(--uc-theme-colour) !important;
-  --toolbarbutton-hover-background: var(--uc-hover-colour) !important;
-  --toolbarbutton-active-background: var(--uc-hover-colour) !important;
-  --toolbarbutton-border-radius: var(--uc-border-radius) !important;
-  --lwt-toolbar-field-focus: var(--uc-theme-colour) !important;
-  --toolbarbutton-icon-fill: var(--uc-inverted-colour) !important;
-  --toolbar-field-focus-background-color: var(--secondary-colour) !important;
-  --toolbar-field-color: var(--uc-inverted-colour) !important;
-  --toolbar-field-focus-color: var(--uc-inverted-colour) !important;
-
-  --tabs-border-color: var(--uc-theme-colour) !important;
-  --tab-border-radius: var(--uc-border-radius) !important;
-  --lwt-text-color: var(--uc-inverted-colour) !important;
-  --lwt-tab-text: var(--uc-inverted-colour) !important;
-
-  --lwt-sidebar-background-color: var(--uc-hover-colour) !important;
-  --lwt-sidebar-text-color: var(--uc-inverted-colour) !important;
-
-  --arrowpanel-border-color: var(--uc-theme-colour) !important;
-  --arrowpanel-border-radius: var(--uc-border-radius) !important;
-  --arrowpanel-background: var(--uc-theme-colour) !important;
-  --arrowpanel-color: var(--inverted-colour) !important;
-
-  --autocomplete-popup-highlight-background: var(
-    --uc-inverted-colour
-  ) !important;
-  --autocomplete-popup-highlight-color: var(--uc-inverted-colour) !important;
-  --autocomplete-popup-hover-background: var(--uc-inverted-colour) !important;
-
-  --tab-block-margin: 2px !important;
-}
-
-window,
-#main-window,
-#toolbar-menubar,
-#TabsToolbar,
-#PersonalToolbar,
-#navigator-toolbox,
-#sidebar-box,
-#nav-bar {
-  appearance: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  background: var(--uc-theme-colour) !important;
-}
-
-/* grey out ccons inside the toolbar to make it
- * more aligned with the Black & White colour look */
-#PersonalToolbar toolbarbutton:not(:hover),
-#bookmarks-toolbar-button:not(:hover) {
-  filter: grayscale(1) !important;
-}
-
-/* Show Window Control Button */
-.titlebar-buttonbox-container {
-  display: -moz-inline-box !important;
-}
-
-/* remove "padding" left and right from tabs */
-.titlebar-spacer {
-  display: none !important;
-}
-
-/* remove gap after pinned tabs */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
-  > #tabbrowser-arrowscrollbox
-  > .tabbrowser-tab[first-visible-unpinned-tab] {
-  margin-inline-start: 0 !important;
-}
-
-/* remove tab shadow */
-.tabbrowser-tab > .tab-stack > .tab-background {
-  box-shadow: none !important;
-}
-
-/* tab background */
-.tabbrowser-tab > .tab-stack > .tab-background {
-  background: var(--uc-theme-colour) !important;
-}
-
-.tabbrowser-tab > .tab-stack > .tab-content {
-  color: var(--inverted-colour) !important;
-}
-
-/* active tab background */
-.tabbrowser-tab[selected] > .tab-stack > .tab-background {
-  background: var(--uc-inverted-colour) !important;
-  border-radius: 5px !important;
-}
-
-.tabbrowser-tab[selected] > .tab-stack > .tab-content {
-  color: var(--window-colour) !important;
-}
-
-/* tab close button options */
-.tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: var(--show-tab-close-button) !important;
-}
-.tabbrowser-tab:not([pinned]):hover .tab-close-button {
-  display: var(--show-tab-close-button-hover) !important;
-}
-
-/* adaptive tab width */
-.tabbrowser-tab[selected][fadein]:not([pinned]) {
-  max-width: var(--uc-active-tab-width) !important;
-}
-.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
-  max-width: var(--uc-inactive-tab-width) !important;
-}
-
-/* container tabs indicator */
-.tabbrowser-tab[usercontextid]
-  > .tab-stack
-  > .tab-background
-  > .tab-context-line {
-  margin: -1px var(--container-tabs-indicator-margin) 0
-    var(--container-tabs-indicator-margin) !important;
-
-  border-radius: var(--tab-border-radius) !important;
-}
-
-/* show favicon when media is playing but tab is hovered */
-.tab-icon-image:not([pinned]) {
-  opacity: 1 !important;
-}
-
-/* Makes the speaker icon to always appear if the tab is playing (not only on hover) */
-.tab-icon-overlay:not([crashed]),
-.tab-icon-overlay[pinned][crashed][selected] {
-  top: 5px !important;
-  z-index: 1 !important;
-
-  padding: 1.5px !important;
-  inset-inline-end: -8px !important;
-  width: 16px !important;
-  height: 16px !important;
-
-  border-radius: 10px !important;
-}
-
-/* style and position speaker icon */
-.tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
-  stroke: transparent !important;
-  background: transparent !important;
-  opacity: 1 !important;
-  fill-opacity: 0.8 !important;
-
-  color: currentColor !important;
-
-  stroke: var(--uc-theme-colour) !important;
-  background-color: var(--uc-theme-colour) !important;
-}
-
-/* change the colours of the speaker icon on active tab to match tab colours */
-.tabbrowser-tab[selected]
-  .tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
-  stroke: var(--uc-hover-colour) !important;
-  background-color: var(--uc-hover-colour) !important;
-}
-
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
-  margin-inline-end: 9.5px !important;
-}
-
-.tabbrowser-tab:not([image])
-  .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
-  top: 0 !important;
-
-  padding: 0 !important;
-  margin-inline-end: 5.5px !important;
-  inset-inline-end: 0 !important;
-}
-
-.tab-icon-overlay:not([crashed])[soundplaying]:hover,
-.tab-icon-overlay:not([crashed])[muted]:hover,
-.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: currentColor !important;
-  stroke: var(--uc-inverted-colour) !important;
-  background-color: var(--uc-inverted-colour) !important;
-  fill-opacity: 0.95 !important;
-}
-
-.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
-.tabbrowser-tab[selected]
-  .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: currentColor !important;
-  stroke: var(--uc-inverted-colour) !important;
-  background-color: var(--uc-inverted-colour) !important;
-  fill-opacity: 0.95 !important;
-}
-
-/* speaker icon colour fix */
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
-#TabsToolbar .tab-icon-overlay:not([crashed])[muted],
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] {
-  color: var(--uc-inverted-colour) !important;
-}
-
-/* speaker icon colour fix on hover */
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: var(--uc-theme-colour) !important;
-}
-
-#nav-bar {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-/* remove border below whole nav */
-#navigator-toolbox {
-  border-bottom: none !important;
-}
-
-#urlbar,
-#urlbar * {
-  box-shadow: none !important;
-}
-
-#urlbar-background {
-  border: var(--uc-hover-colour) !important;
-}
-
-#urlbar[focused="true"] > #urlbar-background,
-#urlbar:not([open]) > #urlbar-background {
-  background: transparent !important;
-}
-
-#urlbar[open] > #urlbar-background {
-  background: var(--uc-theme-colour) !important;
-}
-
-.urlbarView-row:hover > .urlbarView-row-inner,
-.urlbarView-row[selected] > .urlbarView-row-inner {
-  background: var(--uc-hover-colour) !important;
-}
-
-/* transition to oneline */
+/* Reponsive one-line mode */
 @media (min-width: 1000px) {
-  /* move tabs bar over */
-  #TabsToolbar {
-    margin-left: var(--uc-urlbar-width) !important;
+  #navigator-toolbox {
+    display: flex !important;
+    flex-direction: row-reverse !important;
   }
 
-  /* move entire nav bar  */
   #nav-bar {
-    margin: calc((var(--urlbar-min-height) * -1) - 8px)
-      calc(100vw - var(--uc-urlbar-width)) 0 0 !important;
+    width: min(600px, 50%) !important;
   }
-} /* end media query */
+  
+  #titlebar {
+    flex-grow: 1 !important;
+  }
+}
 
-.tabbrowser-tab[label="New Tab"] .tab-icon-image {
-  display:none!important;
+/* Vertically center urlbar in one-line mode */
+#nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  background: none !important;
+}
+
+/* Remove new tab icon */
+.tabbrowser-tab[label="New Tab"]:not([pinned]) .tab-icon-image {
+  display:none !important;
 }
