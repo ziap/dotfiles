@@ -27,10 +27,8 @@
   }
 }
 
-/* Vertically center urlbar in one-line mode */
+/* Remove navigation bar color */
 #nav-bar {
-  display: flex !important;
-  align-items: center !important;
   background: none !important;
 }
 
