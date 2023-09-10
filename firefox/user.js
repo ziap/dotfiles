@@ -25,11 +25,11 @@ user_pref("privacy.clearOnShutdown.sessions", false);
 
 // Enable HTTPS only
 user_pref("dom.security.https_only_mode", true);
-user_pref("dom.security.https_only_mode_ever_enabled", true)
+user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 
 // Enable DNS over HTTPS
-user_pref("network.trr.mode", 2)
+user_pref("network.trr.mode", 2);
 
 // Disable telemetry
 user_pref("toolkit.telemetry.unified", false);
