@@ -55,8 +55,6 @@ bindkey -M main '^N' down-line-or-history
 bindkey -M main '^F' forward-char
 bindkey -M main '^B' backward-char
 
-bindkey '^@' autosuggest-accept
-
 ## Vim binding in tab completion select menu
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
@@ -110,13 +108,15 @@ zstyle ':vcs_info:*' actionformats '  %b (%a)'
 
 setopt prompt_subst
 
-PROMPT='%K{magenta} %n %F{magenta}%K{yellow}%k%F{yellow}%f '
+PROMPT='%F{yellow}[%f%F{green}%n%f%F{blue}@%f%F{magenta}%m%f%F{yellow}]%f ❯ '
 RPROMPT='%(?..%F{red}󰀦 %?%f )%F{blue}%~%f%F{magenta}${vcs_info_msg_0_}%f'
 
 # ---- PLUGINS ----------------------------------
 
-## Syntax highlighting and suggestion
-. /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+## Syntax highlighting
 . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+## Autocompletion (just to make tab completion more convenient)
+. /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
+# bindkey '^@' autosuggest-accept
