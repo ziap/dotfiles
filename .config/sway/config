@@ -41,7 +41,11 @@ default_floating_border pixel 2
 #
 # Aesthetic layout
 #
-output * bg ~/.config/wallpaper.png fill
+output * {
+  # scale 1.25
+  bg ~/.config/wallpaper.png fill
+}
+
 smart_borders on
 gaps inner 6
 

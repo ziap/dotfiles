@@ -17,6 +17,7 @@ SAVEHIST=10000
 # ---- Completion -------------------------------
 autoload -U compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)	
@@ -98,6 +99,7 @@ alias lla='ls -la'
 alias duh='du -h'
 
 # ---- PROMPT -----------------------------------
+
 autoload -Uz vcs_info
 
 function precmd { vcs_info }
@@ -108,7 +110,7 @@ zstyle ':vcs_info:*' actionformats '  %b (%a)'
 
 setopt prompt_subst
 
-PROMPT='%F{yellow}[%f%F{green}%n%f%F{blue}@%f%F{magenta}%m%f%F{yellow}]%f ❯ '
+PROMPT='%(?:%F{green}❯ %f:%F{red}❯ %f)'
 RPROMPT='%(?..%F{red}󰀦 %?%f )%F{blue}%~%f%F{magenta}${vcs_info_msg_0_}%f'
 
 # ---- PLUGINS ----------------------------------
