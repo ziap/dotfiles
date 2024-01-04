@@ -47,14 +47,6 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 ## Installation
 
-<details><summary>If you know what you're doing, skip the part below and simply run the script</summary>
-
-```bash
-curl -fsS https://raw.githubusercontent.com/ziap/dotfiles/master/install_fedora.sh | sh
-```
-
-</details>
-
 ### Clone repository
 
 ```bash
@@ -140,8 +132,7 @@ sudo dnf install neovim gh git git-delta python3 python3-pip nodejs npm gcc gcc-
 Install language servers
 
 ```bash
-sudo npm i -g pyright vscode-langservers-extracted typescript \
-  typescript-language-server emmet-ls
+sudo npm i -g pyright vscode-langservers-extracted typescript typescript-language-server emmet-ls
 ```
 
 Install rust and rust-analyzer
