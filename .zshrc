@@ -65,13 +65,13 @@ bindkey -M menuselect 'l' vi-forward-char
 # ---- FUNCTIONS --------------------------------
 
 ## Same command but with extra features
-function ls { exa --git --icons $@ }
+function ls { eza --git --icons $@ }
 function cat { bat --theme=gruvbox-dark $@ }
 
 ## Fuzzy finder utilities
 function frm { fd --type=file | sk -m --preview 'file {}' | xargs -d '\n' rm }
-function fcd { cd "$(fd --type=d | sk --preview 'exa {} --icons -la')" }
-function fgd { cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview 'exa {} --git-ignore --icons -T') }
+function fcd { cd "$(fd --type=d | sk --preview 'eza {} --icons -la')" }
+function fgd { cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview 'eza {} --git-ignore --icons -T') }
 function fca { bat "$(fd --type=file | sk --preview='bat {} --theme=gruvbox-dark --color=always')" }
 function fxo { xdg-open "$(fd --type=file | sk --preview 'file {}')" }
 function frg { sk --ansi -ic "rg {} --color=always --line-number" }

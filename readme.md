@@ -101,12 +101,12 @@ cp .zshrc ~
 Install extra packages
 
 ```bash
-sudo dnf install sqlite ImageMagick bat exa ripgrep fd-find skim sxiv mpv
+sudo dnf install sqlite ImageMagick bat eza ripgrep fd-find skim sxiv mpv
 ```
 
 - `sqlite`: for dnf autocompletion
 - `ImageMagick`: for command line image editing
-- `bat`, `exa`: Syntax highlighting, icons for `cat` and `ls`
+- `bat`, `eza`: Syntax highlighting, icons for `cat` and `ls`
 - `ripgrep`, `fd-find`: Faster `grep` and `find`
 - `skim`: Fuzzy finder
 - `sxiv`: Image viewer
