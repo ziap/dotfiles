@@ -230,6 +230,11 @@ client.unfocused        $darkgray $darkgray $accent $darkgray $darkgray
 client.urgent           $red $red $accent $red $red
 
 #
+# Disable xwayland
+#
+xwayland disable
+
+#
 # Status Bar:
 #
 bar swaybar_command waybar

@@ -16,7 +16,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 - Editor: [neovim](https://neovim.io/)
 - Terminal: [foot](https://codeberg.org/dnkl/foot/)
 - Browser: [firefox](https://www.mozilla.org/en-US/firefox/)
-- Launcher: [rofi](https://github.com/davatorium/rofi)
+- Launcher: [rofi](https://github.com/davatorium/rofi), [wayland fork](https://github.com/lbonn/rofi)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
 - Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox)
 
@@ -117,7 +117,7 @@ sudo dnf install sqlite ImageMagick bat eza ripgrep fd-find skim sxiv mpv
 ![](img/desktop.png)
 
 ```bash
-sudo dnf install sway rofi waybar luajit slurp grim light playerctl pulseaudio-utils wl-clipboard papirus-icon-theme
+sudo dnf install sway rofi-wayland waybar luajit slurp grim light playerctl pulseaudio-utils wl-clipboard papirus-icon-theme
 ```
 
 - `luajit`: Run Lua rofi scripts
