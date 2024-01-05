@@ -1,18 +1,19 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 
-image/jpeg=sxiv.desktop
-image/bmp=sxiv.desktop
-image/gif=sxiv.desktop
-image/jpg=sxiv.desktop
-image/png=sxiv.desktop
-image/tiff=sxiv.desktop
-image/x-bmp=sxiv.desktop
-image/x-portable-anymap=sxiv.desktop
-image/x-portable-bitmap=sxiv.desktop
-image/x-portable-graymap=sxiv.desktop
-image/x-tga=sxiv.desktop
-image/x-xpixmap=sxiv.desktop
+image/jpeg=imv.desktop
+image/bmp=imv.desktop
+image/gif=imv.desktop
+image/jpg=imv.desktop
+image/png=imv.desktop
+image/tiff=imv.desktop
+image/x-bmp=imv.desktop
+image/x-portable-anymap=imv.desktop
+image/x-portable-bitmap=imv.desktop
+image/x-portable-graymap=imv.desktop
+image/x-tga=imv.desktop
+image/x-xpixmap=imv.desktop
+image/svg+xml=imv.desktop
 
 video/x-ogm+ogg=mpv.desktop
 video/mpeg=mpv.desktop
