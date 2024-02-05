@@ -109,7 +109,7 @@ sudo dnf install sqlite ImageMagick bat eza ripgrep fd-find skim imv mpv
 ![](img/desktop.png)
 
 ```bash
-sudo dnf install sway rofi-wayland waybar luajit slurp grim light playerctl pulseaudio-utils wl-clipboard papirus-icon-theme
+sudo dnf install sway rofi-wayland waybar luajit slurp grim light playerctl pulseaudio-utils wl-clipboard epapirus-icon-theme
 ```
 
 - `luajit`: Run Lua rofi scripts
@@ -117,7 +117,7 @@ sudo dnf install sway rofi-wayland waybar luajit slurp grim light playerctl puls
 - `light`, `pulseaudio-utils`: Control screen brightness and audio volume
 - `playerctl`: Media player controller
 - `wl-clipboard`: Clipboard tool
-- `papirus-icon-theme`: Icon theme for rofi
+- `epapirus-icon-theme`: ePapirus icon theme for rofi
 
 ### Developer environment setup
 
