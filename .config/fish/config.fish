@@ -3,18 +3,23 @@ if status is-interactive
 end
 
 function fish_greeting
-  echo
-  for color in red green yellow blue magenta cyan
-    set_color $color
-    echo -n " ▀■▄ "
-  end
-  printf "\n "
-  for color in red green yellow blue magenta cyan
-    set_color br$color
-    echo -n " ▀■▄ "
-  end
-  echo
-  echo
+  set c1 (set_color brred)
+  set c2 (set_color brgreen)
+  set c3 (set_color bryellow)
+  set c4 (set_color brblue)
+  set c5 (set_color brmagenta)
+  set c6 (set_color brcyan)
+  set c7 (set_color brwhite)
+  
+  echo "
+  $c1  ▄██████▄    $c2  ▄██████▄    $c4  ▄██████▄    $c5  ▄██████▄    $c6  ▄██████▄    
+  $c1▄$c7█▀█$c1██$c7█▀█$c1██▄  $c2▄$c7█▀█$c2██$c7█▀█$c2██▄  $c4▄$c7█▀█$c4██$c7█▀█$c4██▄  $c5▄$c7█▀█$c5██$c7█▀█$c5██▄  $c6▄$c7█▀█$c6██$c7█▀█$c6██▄
+  $c1█$c7▄▄█$c1██$c7▄▄█$c1███  $c2█$c7▄▄█$c2██$c7▄▄█$c2███  $c4█$c7▄▄█$c4██$c7▄▄█$c4███  $c5█$c7▄▄█$c5██$c7▄▄█$c5███  $c6█$c7▄▄█$c6██$c7▄▄█$c6███
+  $c1████████████  $c2████████████  $c4████████████  $c5████████████  $c6████████████  
+  $c1██▀██▀▀██▀██  $c2██▀██▀▀██▀██  $c4██▀██▀▀██▀██  $c5██▀██▀▀██▀██  $c6██▀██▀▀██▀██  
+  $c1▀   ▀  ▀   ▀  $c2▀   ▀  ▀   ▀  $c4▀   ▀  ▀   ▀  $c5▀   ▀  ▀   ▀  $c6▀   ▀  ▀   ▀  
+"
+
   set_color normal
 end
 
