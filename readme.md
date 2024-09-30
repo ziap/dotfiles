@@ -12,7 +12,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 
 - OS: [Fedora Linux](https://getfedora.org/)
 - WM: [sway](https://swaywm.org/)
-- Shell: [zsh](https://www.zsh.org/)
+- Shell: [fish](https://fishshell.com/)
 - Editor: [neovim](https://neovim.io/)
 - Terminal: [foot](https://codeberg.org/dnkl/foot/)
 - Browser: [firefox](https://www.mozilla.org/en-US/firefox/)
@@ -23,7 +23,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 ### Features
 
 - ✨ Minimal and aesthetic gruvbox themed desktop
-- 🗨️ Lightweight and powerful ZSH shell with custom prompt
+- 🗨️ Fish shell configured for my development workflow
 - 🚀 Functional developer environment for
     + C and C++
     + Rust
@@ -81,13 +81,12 @@ Run this script to download all fonts to the local font folder `~/.local/share/f
 
 ![](img/terminal.png)
 
-Install and setup foot, zsh and some plugins
+Install and setup foot and fish
 
 ```bash
-sudo dnf install foot util-linux-user zsh zsh-autosuggestions zsh-syntax-highlighting
+sudo dnf install foot util-linux-user fish
 
-chsh -s $(which zsh)
-cp .zshrc ~ 
+chsh -s $(which fish)
 ```
 
 Install extra packages
