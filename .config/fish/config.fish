@@ -7,7 +7,7 @@ set -x GTK_IM_MODULE fcitx
 set -x QT_IM_MODULE fcitx
 set -x XMODIFIERS "@im=fcitx"
 
-alias cat "bat --theme=gruvbox-dark"
+alias cat "bat"
 alias ls "eza --git --icons"
 alias ll "ls -l"
 alias la "ls -a"
