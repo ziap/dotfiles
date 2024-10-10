@@ -2,7 +2,7 @@
 set fish_greeting
 
 # Shell exports
-set -x EDITOR $(which nvim)
+set -x EDITOR (which nvim)
 set -x GTK_IM_MODULE fcitx
 set -x QT_IM_MODULE fcitx
 set -x XMODIFIERS "@im=fcitx"
@@ -27,7 +27,7 @@ function mkcd
 end
 
 function cdtemp
-  cd $(mktemp -d)
+  cd (mktemp -d)
 end
 
 # Vim keybindings
@@ -39,6 +39,7 @@ function fish_hybrid_key_bindings
 end
 
 set -g fish_key_bindings fish_hybrid_key_bindings
+bind -M insert -k nul accept-autosuggestion
 
 set fish_cursor_default block
 set fish_cursor_insert line
