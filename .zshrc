@@ -15,7 +15,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # ---- Completion -------------------------------
-autoload -U compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 zmodload zsh/complist
@@ -53,14 +53,13 @@ preexec() { echo -ne '\e[5 q' }
 ## Emacs binding in insert mode
 bindkey -M main '^P' up-line-or-history
 bindkey -M main '^N' down-line-or-history
-bindkey -M main '^F' forward-char
 bindkey -M main '^B' backward-char
 
-## Vim binding in tab completion select menu
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
+## Command buffer editing
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M main '^F' edit-command-line
+bindkey -M menuselect '^F' forward-char
 
 # ---- FUNCTIONS --------------------------------
 
@@ -70,8 +69,8 @@ function cat { bat --theme=gruvbox-dark $@ }
 
 ## Fuzzy finder utilities
 function frm { fd --type=file | sk -m --preview 'file {}' | xargs -d '\n' rm }
-function fcd { cd "$(fd --type=d | sk --preview 'eza {} --icons -la')" }
-function fgd { cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview 'eza {} --git-ignore --icons -T') }
+function fcd { cd "$(fd --type=d | sk --preview 'eza {} --icons -la --color=always')" }
+function fgd { cd $(dirname $(fd -H -g \*.git ~/*/) | sk --preview 'eza {} --git-ignore --icons -T --color=always') }
 function fca { bat "$(fd --type=file | sk --preview='bat {} --theme=gruvbox-dark --color=always')" }
 function fxo { xdg-open "$(fd --type=file | sk --preview 'file {}')" }
 function frg { sk --ansi -ic "rg {} --color=always --line-number" }
@@ -87,8 +86,8 @@ function mdc {
     -V "geometry:margin=30mm"
 }
 
-## Just mkdir followed by cd
 mkcd() { mkdir "$1" && cd "$1" }
+cdtemp() { cd "$(mktemp -d)" }
 
 # ---- ALIASES ----------------------------------
 
@@ -110,8 +109,7 @@ zstyle ':vcs_info:*' actionformats '  %b (%a)'
 
 setopt prompt_subst
 
-PROMPT='%(?:%F{green}❯ %f:%F{red}❯ %f)'
-RPROMPT='%(?..%F{red}󰀦 %?%f )%F{blue}%~%f%F{magenta}${vcs_info_msg_0_}%f'
+PROMPT='%F{blue}%~%f%F{magenta}${vcs_info_msg_0_}%f%(?..%F{red} 󰀦 %?%f) %(?:%F{green}❯ %f:%F{red}❯ %f)'
 
 # ---- PLUGINS ----------------------------------
 
