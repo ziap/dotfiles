@@ -9,9 +9,9 @@ set -x XMODIFIERS "@im=fcitx"
 
 alias cat "bat"
 alias ls "eza --git --icons"
-alias ll "ls -l"
+alias ll "ls -l --bytes"
 alias la "ls -a"
-alias lla "ls -la"
+alias lla "ls -la --bytes"
 alias nv "nvim"
 
 function mdc
@@ -40,6 +40,7 @@ end
 
 set -g fish_key_bindings fish_hybrid_key_bindings
 bind -M insert -k nul accept-autosuggestion
+bind -M insert \cF edit_command_buffer
 
 set fish_cursor_default block
 set fish_cursor_insert line
