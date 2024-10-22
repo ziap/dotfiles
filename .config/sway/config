@@ -24,8 +24,7 @@ set {
 #
 # Terminal:
 #
-exec_always foot --server
-set $term footclient
+set $term kitty
 
 default_border pixel 2
 default_floating_border pixel 2
@@ -232,7 +231,7 @@ client.urgent           $red $red $accent $red $red
 #
 # Disable xwayland
 #
-xwayland disable
+# xwayland disable
 
 #
 # Status Bar:

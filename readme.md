@@ -14,7 +14,7 @@ A custom wayland desktop environment fine-tuned to my development workflow and d
 - WM: [sway](https://swaywm.org/)
 - Shell: [fish](https://fishshell.com/)
 - Editor: [neovim](https://neovim.io/)
-- Terminal: [foot](https://codeberg.org/dnkl/foot/)
+- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 - Browser: [firefox](https://www.mozilla.org/en-US/firefox/)
 - Launcher: [rofi](https://github.com/davatorium/rofi), [wayland fork](https://github.com/lbonn/rofi)
 - Bar: [waybar](https://github.com/Alexays/Waybar)
@@ -81,10 +81,10 @@ Run this script to download all fonts to the local font folder `~/.local/share/f
 
 ![](img/terminal.png)
 
-Install and setup foot and fish
+Install and setup kitty and fish
 
 ```bash
-sudo dnf install foot util-linux-user fish
+sudo dnf install kitty util-linux-user fish
 
 chsh -s $(which fish)
 ```
