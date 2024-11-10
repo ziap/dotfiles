@@ -6,7 +6,7 @@ local servers = {
   'clangd',
   'html',
   'cssls',
-  'tsserver',
+  'ts_ls',
   'emmet_ls',
   'rust_analyzer'
 }
