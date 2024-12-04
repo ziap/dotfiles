@@ -21,22 +21,11 @@
   #navigator-toolbox {
     display: flex !important;
     flex-wrap: wrap !important;
-    flex-direction: row !important;
+    flex-direction: row-reverse !important;
   }
 
   #nav-bar {
-    order: 1 !important;
     width: var(--navbar-width) !important;
-  }
-
-  #titlebar {
-    order: 2 !important;
-    width: calc(100% - var(--navbar-width)) !important;
-  }
-
-  #tab-notification-deck {
-    order: 3 !important;
-    width: 100% !important;
   }
 }
 
