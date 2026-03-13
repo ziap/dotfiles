@@ -274,6 +274,9 @@ binds {
   XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
   XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
 
+  XF86MonBrightnessUp   allow-when-locked=true { spawn "${pkgs.brightnessctl}/bin/brightnessctl" "set" "5%+"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "${pkgs.brightnessctl}/bin/brightnessctl" "set" "5%-"; }
+
   Mod+Comma  allow-when-locked=true { spawn "playerctl" "previous"; }
   Mod+Period allow-when-locked=true { spawn "playerctl" "next"; }
   Mod+Slash  allow-when-locked=true { spawn "playerctl" "play-pause"; }
