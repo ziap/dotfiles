@@ -340,7 +340,6 @@ in {
   };
 
   programs.niri.enable = true;
-  programs.light.enable = true;
   services.playerctld.enable = true;
 
   fonts.packages = with pkgs; [

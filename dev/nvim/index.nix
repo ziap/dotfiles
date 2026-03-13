@@ -12,10 +12,11 @@
     withRuby = false;
 
     plugins = with pkgs.vimPlugins; [
+      plenary-nvim
       nvim-web-devicons
-      lualine-nvim
       telescope-nvim
       nvim-treesitter.withAllGrammars
+      lualine-nvim
       blink-cmp
       nvim-lspconfig
       pkgs.vimPlugins.${theme.nvim.plugin}
@@ -32,7 +33,7 @@
       clang-tools
     ];
 
-    extraLuaConfig = /* lua */ ''
+    initLua = /* lua */ ''
       vim.cmd.colorscheme '${theme.nvim.colorscheme}'
       vim.opt.background = 'dark'
 
