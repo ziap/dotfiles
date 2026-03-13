@@ -97,8 +97,8 @@ configuration {
       "",
       ""
     ],
-    "on-scroll-down": "light -U 1",
-    "on-scroll-up": "light -A 1"
+    "on-scroll-down": "${pkgs.brightnessctl}/bin/brightnessctl set 5%+",
+    "on-scroll-up": "${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
   },
   "battery": {
     "format": "{capacity}% {icon}",
