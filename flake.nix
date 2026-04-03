@@ -2,7 +2,6 @@
   description = "Zap's dotfile";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -27,10 +26,10 @@
     homeConfigurations."zap" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit nix-neovim; };
-      modules = [ ./home.nix ];
+      modules = [ ./home-manager/home.nix ];
     };
     nixosModules.userConfig = { config, ... }: {
-      imports = [ ./user.nix ];
+      imports = [ ./desktop/user.nix ];
     };
   };
 }
