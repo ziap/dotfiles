@@ -1,5 +1,5 @@
 {
-  description = "Zap's dotfile";
+  description = "Zap's NixOS dotfiles";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
