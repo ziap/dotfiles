@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "nix-neovim": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773468124,
+        "narHash": "sha256-kg/luQ08MnvOacy8qufaF+RCKkJYSxx/yRpMRBLJSac=",
+        "owner": "ziap",
+        "repo": "nix-neovim",
+        "rev": "82dcf45672f8943b3b6f5c2c01b69b3af1cda1a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ziap",
+        "repo": "nix-neovim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1773282481,
@@ -39,6 +59,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nix-neovim": "nix-neovim",
         "nixpkgs": "nixpkgs"
       }
     }

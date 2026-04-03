@@ -1,9 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nix-neovim, ... }:
 
 {
   # Configure the development environment
   imports = [
-    ./nvim/index.nix
     ./fish.nix
     ./zsh.nix
     ./nushell.nix
@@ -15,15 +14,17 @@
 
   # Use Neovim to view manpages
   home.sessionVariables = {
-    MANPAGER = "${config.programs.neovim.finalPackage}/bin/nvim +Man!";
+    MANPAGER = "${nix-neovim.packages.${pkgs.system}.default}/bin/nvim +Man!";
   };
 
   # Essential packages to enable but not worth its own module
-  home.packages = with pkgs; [
+  home.packages = [
+    nix-neovim.packages.${pkgs.system}.default
+  ] ++ (with pkgs; [
     fd ripgrep skim
     tokei htop
 
     clang
     # Everything else can be installed in development shells
-  ];
+  ]);
 }

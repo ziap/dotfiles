@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of zap";
+  description = "Zap's dotfile";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-neovim = {
+      url = "github:ziap/nix-neovim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: let
+  outputs = { nixpkgs, home-manager, nix-neovim, ... }: let
     forAllSystems = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed;
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
@@ -22,6 +26,7 @@
     # Home manager configuration modules
     homeConfigurations."zap" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+      extraSpecialArgs = { inherit nix-neovim; };
       modules = [ ./home.nix ];
     };
     nixosModules.userConfig = { config, ... }: {

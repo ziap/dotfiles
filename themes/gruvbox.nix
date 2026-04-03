@@ -24,9 +24,4 @@
   bright5 = "D3869B";
   bright6 = "8EC07C";
   bright7 = "EBDBB2";
-
-  nvim = {
-    plugin = "gruvbox-nvim";
-    colorscheme = "gruvbox";
-  };
 }
