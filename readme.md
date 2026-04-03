@@ -24,6 +24,38 @@ TBA
 
 ## Installation
 
+Flake-ify your `configuration.nix` and add the dotfiles as an input:
+
+```nix
+{
+  description = "Your NixOS system configuration";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    dotfiles = {
+      url = "github:ziap/dotfiles-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { self, nixpkgs, dotfiles }: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./configuration.nix
+        dotfiles.nixosModules.userConfig
+      ];
+    };
+  };
+}
+```
+
+Rebuild the system with the included configuration
+
+```bash
+sudo nixos rebuild switch
+```
+
 Clone the repository
 
 ```bash
@@ -31,47 +63,9 @@ git clone https://github.com/ziap/dotfiles-nixos dotfiles
 cd dotfiles
 ```
 
-Change the username and home directory in `home.nix` and `user.nix`
-
-```nix
-# home.nix
-{
-  home = let 
-    username = "<your username>";
-  in {
-    username = username;
-    homeDirectory = "/home/${username}";
-    # ...
-  };
-}
-
-# user.nix
-let
-  username = "<your username>";
-in {
-  # ...
-}
-```
-
-Include `user.nix` in your `configuration.nix`
-
-```nix
-# configuration.nix
-{
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./user.nix
-  ];
-
-  # ...
-}
-```
-
 Install and activate home-manager
 
 ```bash
-sudo nixos rebuild switch
 nix run . -- switch --flake .
 ```
 
