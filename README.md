@@ -22,7 +22,8 @@ My custom environment ported to NixOS and managed with home-manager
 
 This repository contains my desktop and development environment managed using
 NixOS. It's based on my old Fedora - Sway dotfiles available (but unmaintained)
-here, but migrated to NixOS for:
+[here](https://github.com/ziap/dotfiles/tree/old-fedora), but migrated to NixOS
+for:
 
 - More and newer packages on nixpkgs
 - Better reproducibility and ease of setting up
@@ -40,7 +41,7 @@ Flake-ify your `configuration.nix` and add the dotfiles as an input:
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     dotfiles = {
-      url = "github:ziap/dotfiles-nixos";
+      url = "github:ziap/dotfiles";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -66,7 +67,7 @@ sudo nixos rebuild switch
 Clone the repository
 
 ```bash
-git clone https://github.com/ziap/dotfiles-nixos dotfiles
+git clone https://github.com/ziap/dotfiles
 cd dotfiles
 ```
 
