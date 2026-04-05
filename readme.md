@@ -8,13 +8,15 @@ My custom environment ported to NixOS and managed with home-manager
 
 ## Informations
 
+<img alt="screenshot" align="right" width="50%" src=".github/assets/rice.png"/>
+
 - OS: [NixOS](https://nixos.org/)
 - WM: [Niri](https://github.com/YaLTeR/niri/)
 - Shell: [Fish](https://fishshell.com/) with [Starship prompt](//starship.rs/)
 - Editor: [Neovim](https://neovim.io/)
 - Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Browser: [Firefox](https://www.mozilla.org/en-US/firefox/)
-- Launcher: [Rofi](https://github.com/davatorium/rofi), [wayland fork](https://github.com/lbonn/rofi)
+- Launcher: [Rofi](https://github.com/davatorium/rofi)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Colorscheme: [Gruvbox](https://github.com/morhetz/gruvbox)
 
