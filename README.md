@@ -20,9 +20,14 @@ My custom environment ported to NixOS and managed with home-manager
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Colorscheme: [Gruvbox](https://github.com/morhetz/gruvbox)
 
-## Screenshots
+This repository contains my desktop and development environment managed using
+NixOS. It's based on my old Fedora - Sway dotfiles available (but unmaintained)
+here, but migrated to NixOS for:
 
-TBA
+- More and newer packages on nixpkgs
+- Better reproducibility and ease of setting up
+- Per-project isolated development environment
+- Easier upgrade and maintenance
 
 ## Installation
 
