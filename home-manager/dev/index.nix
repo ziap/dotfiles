@@ -1,6 +1,8 @@
 { config, pkgs, nix-neovim, ... }:
 
-{
+let 
+  system = pkgs.stdenv.hostPlatform.system;
+in {
   # Configure the development environment
   imports = [
     ./fish.nix
@@ -14,12 +16,12 @@
 
   # Use Neovim to view manpages
   home.sessionVariables = {
-    MANPAGER = "${nix-neovim.packages.${pkgs.system}.default}/bin/nvim +Man!";
+    MANPAGER = "${nix-neovim.packages.${system}.default}/bin/nvim +Man!";
   };
 
   # Essential packages to enable but not worth its own module
   home.packages = [
-    nix-neovim.packages.${pkgs.system}.default
+    nix-neovim.packages.${system}.default
   ] ++ (with pkgs; [
     fd ripgrep skim
     tokei htop
