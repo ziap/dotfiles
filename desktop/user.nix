@@ -66,6 +66,10 @@ in {
   # Virtualization
   programs.virt-manager.enable = true;
   virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
     libvirtd = {
       enable = true;
       qemu.vhostUserPackages = [ pkgs.virtiofsd ];
