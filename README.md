@@ -12,8 +12,8 @@ My custom environment ported to NixOS and managed with home-manager
 
 - OS: [NixOS](https://nixos.org/)
 - WM: [Niri](https://github.com/YaLTeR/niri/)
-- Shell: [Fish](https://fishshell.com/) with [Starship prompt](//starship.rs/)
-- Editor: [Neovim](https://neovim.io/)
+- Shell: [Fish](https://fishshell.com/) with [Starship prompt](https://starship.rs/)
+- Editor: [Neovim](https://neovim.io/) with a [standalone flake](https://github.com/ziap/nix-neovim)
 - Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Browser: [Firefox](https://www.mozilla.org/en-US/firefox/)
 - Launcher: [Rofi](https://github.com/davatorium/rofi)
