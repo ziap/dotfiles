@@ -2,6 +2,7 @@
 
 let 
   system = pkgs.stdenv.hostPlatform.system;
+  neovim = nix-neovim.packages.${system}.default;
 in {
   # Configure the development environment
   imports = [
@@ -16,12 +17,13 @@ in {
 
   # Use Neovim to view manpages
   home.sessionVariables = {
-    MANPAGER = "${nix-neovim.packages.${system}.default}/bin/nvim +Man!";
+    EDITOR = "${neovim}/bin/nvim";
+    MANPAGER = "${neovim}/bin/nvim +Man!";
   };
 
   # Essential packages to enable but not worth its own module
   home.packages = [
-    nix-neovim.packages.${system}.default
+    neovim
   ] ++ (with pkgs; [
     fd ripgrep skim
     tokei htop
