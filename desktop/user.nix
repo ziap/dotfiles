@@ -50,11 +50,7 @@ in {
     };
   };
 
-  environment.etc."greetd/environments".text = ''
-    niri-session
-    fish
-    bash
-  '';
+  systemd.user.services.niri.enableDefaultPath = false;
 
   services.flatpak.enable = true;
   documentation.dev.enable = true;
