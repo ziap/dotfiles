@@ -29,23 +29,12 @@ in {
     bibata-cursors
   ];
 
-  # Auto login
-  services.greetd = let 
-    tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
-    session = "${config.programs.niri.package}/bin/niri-session";
-  in {
+  services.greetd = {
     enable = true;
     settings = {
-      initial_session = {
-        command = session;
-        user = username;
-      };
       default_session = {
-        command = /*sh*/ ''
-          ${tuigreet} --greeting 'Welcome to NixOS!' --asterisks --time
-            --remember --remember-user-session -cmd ${session}
-        '';
-        user = "greeter";
+        command = "${config.programs.niri.package}/bin/niri-session";
+        user = username;
       };
     };
   };
