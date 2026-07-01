@@ -50,6 +50,12 @@ in {
     };
   };
 
+  environment.etc."greetd/environments".text = ''
+    niri-session
+    fish
+    bash
+  '';
+
   services.flatpak.enable = true;
   documentation.dev.enable = true;
 
