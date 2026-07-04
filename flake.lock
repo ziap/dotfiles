@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783137015,
-        "narHash": "sha256-dlDCG0cGK8TM2k/jD+P16twHXbyLgKXpuTU9UovTstw=",
+        "lastModified": 1783138408,
+        "narHash": "sha256-QRcPZxxGEAlW0SVoLlgl53dv/K+Y2PA3j3t3AGEvBgo=",
         "owner": "ziap",
         "repo": "nix-neovim",
-        "rev": "91de86bd616b714354553e4f2a3290b865614a3a",
+        "rev": "59e1073f9d77c11e1beda360b29d8489f0e23f06",
         "type": "github"
       },
       "original": {
