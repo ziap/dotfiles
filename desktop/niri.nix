@@ -343,6 +343,8 @@ in {
   };
 
   programs.niri.enable = true;
+  systemd.user.services.niri.enableDefaultPath = false;
+
   services.playerctld.enable = true;
 
   fonts.packages = with pkgs; [

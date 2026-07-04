@@ -29,6 +29,10 @@ in {
     bibata-cursors
   ];
 
+  services.flatpak.enable = true;
+  documentation.dev.enable = true;
+
+  # Login
   services.greetd = {
     enable = true;
     settings = {
@@ -38,11 +42,6 @@ in {
       };
     };
   };
-
-  systemd.user.services.niri.enableDefaultPath = false;
-
-  services.flatpak.enable = true;
-  documentation.dev.enable = true;
 
   # Enable Pipewire (multimedia codecs)
   # <https://nixos.wiki/wiki/PipeWire>
