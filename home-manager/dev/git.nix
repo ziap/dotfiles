@@ -9,6 +9,9 @@
         name = "Zap";
         email = "67962871+ziap@users.noreply.github.com";
       };
+      diff = {
+        tool = "nvimdiff";
+      };
     };
   };
 
