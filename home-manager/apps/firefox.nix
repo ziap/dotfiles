@@ -55,7 +55,9 @@
           #toolbar-menubar,
           .titlebar-buttonbox-container,
           .titlebar-spacer,
-          #PersonalToolbar {
+          #PersonalToolbar,
+          #sidebar-button,
+          #alltabs-button {
             display: none !important;
           }
 
